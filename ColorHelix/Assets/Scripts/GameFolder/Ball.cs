@@ -9,6 +9,14 @@ public class Ball : MonoBehaviour
     public float speed = 6;
     private bool isMove;
 
+    private static Color currrentColor;
+    private MeshRenderer meshRenderer;
+
+    private void Awake()
+    {
+        meshRenderer = GetComponent<MeshRenderer>();
+    }
+
     private void Start()
     {
         isMove = false;
@@ -26,10 +34,45 @@ public class Ball : MonoBehaviour
             Ball.forward += speed * 0.025f;
 
         transform.position = new Vector3(0, height, Ball.forward);
+
+        UpdateColor();
+    }
+
+    void UpdateColor()
+    {
+        meshRenderer.sharedMaterial.color = currrentColor;
     }
 
     public static float GetZ()
     {
         return forward;
+    }
+
+    public static Color SetColor(Color color)
+    {
+        return currrentColor = color;
+    }
+    public static Color GetColor(Color color)
+    {
+        return currrentColor;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Hit")
+        {
+            print("WE HIT THE WALL");
+        }
+
+        if(other.tag == "Fail")
+        {
+            print("GAME OVER!");
+        }
+
+
+        if (other.CompareTag("FinishLine"))
+        {
+            print("LevelUP!");
+        }
     }
 }

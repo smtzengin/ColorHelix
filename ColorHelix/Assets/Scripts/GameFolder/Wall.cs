@@ -27,9 +27,15 @@ public class Wall : MonoBehaviour
 
         wall1.name = "Wall1";
         wall2.name = "Wall2";
+
+
         wall1.transform.SetParent(transform);
         wall2.transform.SetParent(transform);
 
+        wall2.tag = "Fail";
+        wall2.AddComponent<BoxCollider>();
+        wall2.GetComponent<BoxCollider>().size = new Vector3(.9f, 1.85f, 0.2f);     
+        wall2.GetComponent<BoxCollider>().center = new Vector3(0.46f, 0, 0f);
 
 
         for (int i = 0; i < 100; i++)
@@ -40,6 +46,8 @@ public class Wall : MonoBehaviour
             if (rotationZ <= rotationZMax)
             {
                 wallF.transform.SetParent(wall1.transform);
+                wallF.gameObject.tag = "Hit";
+                
             }
             else
             {
@@ -49,5 +57,8 @@ public class Wall : MonoBehaviour
 
         wall1.transform.localPosition = Vector3.zero;
         wall2.transform.localPosition = Vector3.zero;
+
+        wall1.transform.localRotation = Quaternion.Euler(Vector3.zero);
+        wall2.transform.localRotation = Quaternion.Euler(Vector3.zero);
     }
 }

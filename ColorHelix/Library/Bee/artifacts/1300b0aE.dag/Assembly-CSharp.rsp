@@ -353,9 +353,11 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/GameFolder/Ball.cs"
 "Assets/Scripts/GameFolder/CameraFollow.cs"
+"Assets/Scripts/GameFolder/GameController.cs"
 "Assets/Scripts/GameFolder/Helix.cs"
 "Assets/Scripts/GameFolder/HelixCylinder.cs"
 "Assets/Scripts/GameFolder/Wall.cs"
+"Assets/Scripts/GameFolder/WallFragment.cs"
 "Assets/Scripts/UI/Touch.cs"
 -langversion:9.0
 
