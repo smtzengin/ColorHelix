@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
     public GameObject finishLine;
+    private GameObject[] walls2;
 
     public Color[] colors;
     [HideInInspector]
@@ -14,6 +15,8 @@ public class GameController : MonoBehaviour
 
     private int wallsSpawnNumber = 11;
     public float z = 7f;
+
+    private bool colorBump;
 
     private void Awake()
     {
@@ -38,6 +41,32 @@ public class GameController : MonoBehaviour
 
         Ball.SetColor(hitColor);
     }
+    public void GenerateLevel()
+    {
+        wallsSpawnNumber = 12;
+        z = 7;
+
+        DeleteWalls();
+
+        colorBump = false;
+
+        SpawnWalls();
+    }
+
+    void DeleteWalls()
+    {
+        walls2 = GameObject.FindGameObjectsWithTag("Fail");
+
+        if(walls2.Length > 1)
+        {
+            for (int i = 0; i < walls2.Length; i++)
+            {
+                Destroy(walls2[i].transform.parent.gameObject);
+            }
+        }
+
+        Destroy(GameObject.FindGameObjectWithTag("ColorBump"));
+    }
 
     void SpawnWalls()
     {
@@ -45,7 +74,25 @@ public class GameController : MonoBehaviour
         {
             GameObject wall;
 
-            wall = Instantiate(Resources.Load("Wall") as GameObject, transform.position, Quaternion.identity);
+            if(Random.value <= 0.2 && !colorBump)
+            {
+                colorBump = true;
+                wall = Instantiate(Resources.Load("ColorBump") as GameObject, transform.position, Quaternion.identity);
+            }
+            else if(Random.value <= 0.2)
+            {
+                wall = Instantiate(Resources.Load("Walls") as GameObject, transform.position, Quaternion.identity);
+            }
+            else if (i >= wallsSpawnNumber - 1 && !colorBump)
+            {
+                colorBump = true;
+                wall = Instantiate(Resources.Load("ColorBump") as GameObject, transform.position, Quaternion.identity);
+            }
+            else
+            {
+                wall = Instantiate(Resources.Load("Wall") as GameObject, transform.position, Quaternion.identity);
+            }
+
 
             wall.transform.SetParent(GameObject.Find("Helix").transform);
 
@@ -58,7 +105,7 @@ public class GameController : MonoBehaviour
             z += 7;
 
             if (i <= wallsSpawnNumber)
-                finishLine.transform.position = new Vector3(0, 0.03f, z+75);
+                finishLine.transform.position = new Vector3(0, 0.03f, z);
 
         }
 

@@ -7,7 +7,8 @@ public class Ball : MonoBehaviour
     private static float forward;
     public float height = 0.58f;
     public float speed = 6;
-    private bool isMove;
+    private bool isMove,isRising;
+    private float lerpAmount;
 
     private static Color currrentColor;
     private MeshRenderer meshRenderer;
@@ -41,6 +42,15 @@ public class Ball : MonoBehaviour
     void UpdateColor()
     {
         meshRenderer.sharedMaterial.color = currrentColor;
+        if (isRising)
+        {
+            currrentColor = Color.Lerp(meshRenderer.material.color, GameObject.FindGameObjectWithTag("ColorBump").GetComponent<ColorBump>().GetColor(), lerpAmount);
+            lerpAmount += Time.deltaTime;
+        }
+        if(lerpAmount >= 1)
+        {
+            isRising = false;
+        }
     }
 
     public static float GetZ()
@@ -61,18 +71,46 @@ public class Ball : MonoBehaviour
     {
         if(other.tag == "Hit")
         {
-            print("WE HIT THE WALL");
+            Destroy(other.transform.parent.gameObject);
+        }
+
+        if(other.tag == "ColorBump")
+        {
+            lerpAmount = 0;
+            isRising = true;
         }
 
         if(other.tag == "Fail")
         {
-            print("GAME OVER!");
+            StartCoroutine(GameOver());
         }
 
 
         if (other.CompareTag("FinishLine"))
         {
-            print("LevelUP!");
+            StartCoroutine(PlayNewLevel());
         }
+    }
+
+    IEnumerator GameOver()
+    {
+
+        GameController.instance.GenerateLevel();
+        Ball.forward = 0;
+        isMove = false;
+        yield break;
+    }
+
+    IEnumerator PlayNewLevel()
+    {
+        Camera.main.GetComponent<CameraFollow>().enabled = false;
+        yield return new WaitForSeconds(1.5f);
+        isMove = false;
+        //Flash
+        //Level++
+        Camera.main.GetComponent<CameraFollow>().enabled = true;
+        Ball.forward = 0;
+        GameController.instance.GenerateLevel();
+
     }
 }
