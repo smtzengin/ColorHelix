@@ -7,28 +7,34 @@ public class Ball : MonoBehaviour
     private static float forward;
     public float height = 0.58f;
     public float speed = 6;
-    private bool isMove,isRising;
+    private bool isMove,isRising,gameOver;
     private float lerpAmount;
 
     private static Color currrentColor;
     private MeshRenderer meshRenderer;
 
+    private SpriteRenderer splash;
+
     private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
+        splash = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     private void Start()
     {
         isMove = false;
+        SetColor(GameController.instance.hitColor);
     }
 
     private void Update()
     {
+        print(PlayerPrefs.GetInt("Level" , 1));
 
-        if (Touch.IsPressing())
+        if (Touch.IsPressing() && !gameOver)
         {
             isMove = true;
+            GetComponent<SphereCollider>().enabled = true;
         }
 
         if (isMove)
@@ -94,11 +100,23 @@ public class Ball : MonoBehaviour
 
     IEnumerator GameOver()
     {
+        gameOver = true;
+        splash.color = currrentColor;
+        splash.transform.position = new Vector3(0, 0.7f, Ball.forward - 0.05f);
+        splash.transform.eulerAngles = new Vector3(0, 0, Random.value * 360);
+        splash.enabled = true;
 
-        GameController.instance.GenerateLevel();
-        Ball.forward = 0;
+        meshRenderer.enabled = false;
+        GetComponent<SphereCollider>().enabled = false;
         isMove = false;
-        yield break;
+        
+        yield return new WaitForSeconds(1.5f);
+        gameOver = false;
+        forward = 0;
+        GameController.instance.GenerateLevel();
+        splash.enabled = false;
+        meshRenderer.enabled = true;
+        
     }
 
     IEnumerator PlayNewLevel()
@@ -107,7 +125,7 @@ public class Ball : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         isMove = false;
         //Flash
-        //Level++
+        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1); 
         Camera.main.GetComponent<CameraFollow>().enabled = true;
         Ball.forward = 0;
         GameController.instance.GenerateLevel();

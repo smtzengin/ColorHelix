@@ -11,6 +11,8 @@ public class Wall : MonoBehaviour
     private float rotationZ;
     private float rotationZMax = 180f;
 
+    private bool smallWall;
+
     private void Awake()
     {
         wallFragment = Resources.Load("WallFragment") as GameObject;
@@ -40,8 +42,16 @@ public class Wall : MonoBehaviour
         wall2.AddComponent<BoxCollider>();
         wall2.GetComponent<BoxCollider>().size = new Vector3(.9f, 1.85f, 0.2f);
         wall2.GetComponent<BoxCollider>().center = new Vector3(0.46f, 0, 0f);
-        
 
+        if(Random.value <= 0.2 && PlayerPrefs.GetInt("Level") >= 3)
+        {
+            smallWall = true;
+        }
+
+        if (smallWall)
+            rotationZMax = 90;
+        else
+            rotationZMax = 180;
 
         for (int i = 0; i < 100; i++)
         {
@@ -66,8 +76,18 @@ public class Wall : MonoBehaviour
         wall1.transform.localRotation = Quaternion.Euler(Vector3.zero);
         wall2.transform.localRotation = Quaternion.Euler(Vector3.zero);
 
-        GameObject wallFragmentChild = wall1.transform.GetChild(25).gameObject;
-        AddStar(wallFragmentChild);
+        if (smallWall)
+        {
+            GameObject wallFragmentChild = wall1.transform.GetChild(25).gameObject;
+            AddStar(wallFragmentChild);
+        }
+
+        else
+        {
+            GameObject wallFragmentChild = wall1.transform.GetChild(14).gameObject;
+            AddStar(wallFragmentChild);
+        }
+        
     }
 
     void AddStar(GameObject wallFragmentChild)

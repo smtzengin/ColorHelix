@@ -14,7 +14,8 @@ public class GameController : MonoBehaviour
     public Color hitColor, failColor;
 
     private int wallsSpawnNumber = 11;
-    public float z = 7f;
+    private float z = 7f;
+    private int level;
 
     private bool colorBump;
 
@@ -22,10 +23,12 @@ public class GameController : MonoBehaviour
     {
         instance = this;
         GenerateColors();
+        PlayerPrefs.GetInt("Level", 1);
     }
 
     private void Start()
     {
+        
         SpawnWalls();
     }
 
@@ -43,7 +46,14 @@ public class GameController : MonoBehaviour
     }
     public void GenerateLevel()
     {
-        wallsSpawnNumber = 12;
+
+        if (PlayerPrefs.GetInt("Level") >= 1 && PlayerPrefs.GetInt("Level") <= 4)
+            wallsSpawnNumber = 12;
+        else if (PlayerPrefs.GetInt("Level") >= 5 && PlayerPrefs.GetInt("Level") <= 10)
+            wallsSpawnNumber = 14;
+        else
+            wallsSpawnNumber = 16;
+
         z = 7;
 
         DeleteWalls();
@@ -74,16 +84,16 @@ public class GameController : MonoBehaviour
         {
             GameObject wall;
 
-            if(Random.value <= 0.2 && !colorBump)
+            if(Random.value <= 0.2 && !colorBump && PlayerPrefs.GetInt("Level") >= 3)
             {
                 colorBump = true;
                 wall = Instantiate(Resources.Load("ColorBump") as GameObject, transform.position, Quaternion.identity);
             }
-            else if(Random.value <= 0.2)
+            else if(Random.value <= 0.2 && PlayerPrefs.GetInt("Level") >= 6)
             {
                 wall = Instantiate(Resources.Load("Walls") as GameObject, transform.position, Quaternion.identity);
             }
-            else if (i >= wallsSpawnNumber - 1 && !colorBump)
+            else if (i >= wallsSpawnNumber - 1 && !colorBump && PlayerPrefs.GetInt("Level") >= 3)
             {
                 colorBump = true;
                 wall = Instantiate(Resources.Load("ColorBump") as GameObject, transform.position, Quaternion.identity);
