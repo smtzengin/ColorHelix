@@ -9,6 +9,7 @@ TagManager:
   - Fail
   - ColorBump
   - Star
+  - Wall1
   layers:
   - Default
   - TransparentFX

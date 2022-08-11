@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ParticleController : MonoBehaviour
+{
+    private ParticleSystem particle;
+    private float particleZ;
+
+    private void Start()
+    {
+        //particle.startColor = Ball.GetColor();
+    }
+    private void Awake()
+    {
+        particle = GetComponent<ParticleSystem>();
+    }
+
+
+    private void Update()
+    {
+        particleZ = Ball.GetZ() - 2.2f;
+        transform.position = new Vector3(0, 2.2f, particleZ);
+    }
+}

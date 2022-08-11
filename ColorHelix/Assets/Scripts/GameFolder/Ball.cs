@@ -4,131 +4,159 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private static float forward;
-    public float height = 0.58f;
-    public float speed = 6;
-    private bool isMove,isRising,gameOver;
-    private float lerpAmount;
 
-    private static Color currrentColor;
+    private static float z;
+
+    private static Color currentColor;
+
     private MeshRenderer meshRenderer;
-
     private SpriteRenderer splash;
 
-    private void Awake()
+    public float height = 0.58f, speed = 6;
+    private float lerpAmount;
+
+    private bool move, isRising, gameOver, displayed;
+    public bool perfectStar;
+
+    private AudioSource failSound, hitSound, levelCompleteSound;
+
+    void Awake()
     {
+        failSound = GameObject.Find("FailSound").GetComponent<AudioSource>();
+        hitSound = GameObject.Find("HitSound").GetComponent<AudioSource>();
+        levelCompleteSound = GameObject.Find("LevelCompleteSound").GetComponent<AudioSource>();
         meshRenderer = GetComponent<MeshRenderer>();
         splash = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
-    private void Start()
+    void Start()
     {
-        isMove = false;
+        move = false;
         SetColor(GameController.instance.hitColor);
     }
 
-    private void Update()
+    void Update()
     {
-        print(PlayerPrefs.GetInt("Level" , 1));
-
         if (Touch.IsPressing() && !gameOver)
         {
-            isMove = true;
+            move = true;
             GetComponent<SphereCollider>().enabled = true;
         }
 
-        if (isMove)
-            Ball.forward += speed * 0.025f;
+        if (move)
+            Ball.z += speed * 0.025f;
 
-        transform.position = new Vector3(0, height, Ball.forward);
+        transform.position = new Vector3(0, height, Ball.z);
 
+        displayed = false;
         UpdateColor();
     }
 
     void UpdateColor()
     {
-        meshRenderer.sharedMaterial.color = currrentColor;
+        
+        meshRenderer.sharedMaterial.color = currentColor;
         if (isRising)
         {
-            currrentColor = Color.Lerp(meshRenderer.material.color, GameObject.FindGameObjectWithTag("ColorBump").GetComponent<ColorBump>().GetColor(), lerpAmount);
+            currentColor = Color.Lerp(meshRenderer.material.color, GameObject.FindGameObjectWithTag("ColorBump").GetComponent<ColorBump>().GetColor()
+                , lerpAmount);
             lerpAmount += Time.deltaTime;
         }
-        if(lerpAmount >= 1)
-        {
+        if (lerpAmount >= 1)
             isRising = false;
-        }
     }
 
     public static float GetZ()
     {
-        return forward;
+        return Ball.z;
     }
 
     public static Color SetColor(Color color)
     {
-        return currrentColor = color;
-    }
-    public static Color GetColor(Color color)
-    {
-        return currrentColor;
+        return currentColor = color;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public static Color GetColor()
     {
-        if(other.tag == "Hit")
+        return currentColor;
+    }
+    
+
+    void OnTriggerEnter(Collider target)
+    {
+        if (target.tag == "Hit")
         {
-            Destroy(other.transform.parent.gameObject);
+            if (perfectStar && !displayed)
+            {
+                displayed = true;
+                GameObject pointDisplay = Instantiate(Resources.Load("PointDisplay"), transform.position, Quaternion.identity) as GameObject;
+                pointDisplay.GetComponent<PointDisplay>().SetText("PERFECT +" + PlayerPrefs.GetInt("Level") * 2);
+            }
+            else if (!perfectStar && !displayed)
+            {
+                displayed = true;
+                GameObject pointDisplay = Instantiate(Resources.Load("PointDisplay"), transform.position, Quaternion.identity) as GameObject;
+                pointDisplay.GetComponent<PointDisplay>().SetText("+" + PlayerPrefs.GetInt("Level"));
+            }
+            hitSound.Play();
+            Destroy(target.transform.parent.gameObject);
         }
 
-        if(other.tag == "ColorBump")
+        if (target.tag == "ColorBump")
         {
             lerpAmount = 0;
+            speed += 0.1f;
             isRising = true;
         }
 
-        if(other.tag == "Fail")
+        if (target.tag == "Fail")
         {
             StartCoroutine(GameOver());
         }
 
-
-        if (other.CompareTag("FinishLine"))
+        if (target.CompareTag("FinishLine"))
         {
             StartCoroutine(PlayNewLevel());
         }
+
+        if (target.tag == "Star")
+        {
+            perfectStar = true;
+        }
+    }
+
+    IEnumerator PlayNewLevel()
+    {
+        levelCompleteSound.Play();
+        Camera.main.GetComponent<CameraFollow>().enabled = false;
+        yield return new WaitForSeconds(1.5f);
+        move = false;
+        Camera.main.GetComponent<CameraFollow>().Flash();
+        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
+        Camera.main.GetComponent<CameraFollow>().enabled = true;
+        Ball.z = 0;
+        GameController.instance.GenerateLevel();
     }
 
     IEnumerator GameOver()
     {
+        failSound.Play();
         gameOver = true;
-        splash.color = currrentColor;
-        splash.transform.position = new Vector3(0, 0.7f, Ball.forward - 0.05f);
+        splash.color = currentColor;
+        splash.transform.position = new Vector3(0, 0.7f, Ball.z - 0.05f);
         splash.transform.eulerAngles = new Vector3(0, 0, Random.value * 360);
         splash.enabled = true;
 
         meshRenderer.enabled = false;
         GetComponent<SphereCollider>().enabled = false;
-        isMove = false;
-        
+        move = false;
         yield return new WaitForSeconds(1.5f);
+        Camera.main.GetComponent<CameraFollow>().Flash();
         gameOver = false;
-        forward = 0;
+        z = 0;
         GameController.instance.GenerateLevel();
         splash.enabled = false;
         meshRenderer.enabled = true;
-        
     }
 
-    IEnumerator PlayNewLevel()
-    {
-        Camera.main.GetComponent<CameraFollow>().enabled = false;
-        yield return new WaitForSeconds(1.5f);
-        isMove = false;
-        //Flash
-        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1); 
-        Camera.main.GetComponent<CameraFollow>().enabled = true;
-        Ball.forward = 0;
-        GameController.instance.GenerateLevel();
-
-    }
 }

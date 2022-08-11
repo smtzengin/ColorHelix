@@ -7,15 +7,16 @@ public class GameController : MonoBehaviour
     public static GameController instance;
 
     public GameObject finishLine;
-    private GameObject[] walls2;
+    private GameObject[] walls2,walls1;
 
     public Color[] colors;
     [HideInInspector]
     public Color hitColor, failColor;
 
-    private int wallsSpawnNumber = 11;
+    private int wallsSpawnNumber = 11,wallsCount = 0;
     private float z = 7f;
     private int level;
+    public int score;
 
     private bool colorBump;
 
@@ -29,12 +30,28 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         
+        if(PlayerPrefs.GetInt("Level") == 0)
+        {
+            PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
+        }
+
         SpawnWalls();
+    }
+
+    private void Update()
+    {
+        SumUpWalls();
+    }
+
+    public  float GetFinishLineDistance()
+    {
+        return finishLine.transform.position.z;
     }
 
 
     void GenerateColors()
     {
+       
         hitColor = colors[Random.Range(0, colors.Length)];
 
         failColor = colors[Random.Range(0, colors.Length)];
@@ -44,17 +61,42 @@ public class GameController : MonoBehaviour
 
         Ball.SetColor(hitColor);
     }
+
+    void SumUpWalls()
+    {
+        walls1 = GameObject.FindGameObjectsWithTag("Wall1");
+        
+        if(walls1.Length > wallsCount)
+            wallsCount = walls1.Length;
+
+        if(wallsCount > walls1.Length)
+        {
+            wallsCount = walls1.Length;
+            if (GameObject.Find("Ball").GetComponent<Ball>().perfectStar)
+            {
+                GameObject.Find("Ball").GetComponent<Ball>().perfectStar = false;
+                score += PlayerPrefs.GetInt("Level") * 2;
+            }
+            else
+            {
+                score += PlayerPrefs.GetInt("Level");
+            }
+            //print(score);
+        }
+    }
+
     public void GenerateLevel()
     {
+        GenerateColors();
 
         if (PlayerPrefs.GetInt("Level") >= 1 && PlayerPrefs.GetInt("Level") <= 4)
-            wallsSpawnNumber = 12;
-        else if (PlayerPrefs.GetInt("Level") >= 5 && PlayerPrefs.GetInt("Level") <= 10)
             wallsSpawnNumber = 14;
-        else
+        else if (PlayerPrefs.GetInt("Level") >= 5 && PlayerPrefs.GetInt("Level") <= 10)
             wallsSpawnNumber = 16;
+        else
+            wallsSpawnNumber = 18;
 
-        z = 7;
+        z = 6;
 
         DeleteWalls();
 

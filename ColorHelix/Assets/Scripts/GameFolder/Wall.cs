@@ -32,18 +32,19 @@ public class Wall : MonoBehaviour
         wall1.name = "Wall1";
         wall2.name = "Wall2";
 
-        
+        wall1.tag = "Wall1";
+        wall2.tag = "Fail";
 
         wall1.transform.SetParent(transform);
         wall2.transform.SetParent(transform);
 
-        wall2.tag = "Fail";
+        
 
         wall2.AddComponent<BoxCollider>();
-        wall2.GetComponent<BoxCollider>().size = new Vector3(.9f, 1.85f, 0.2f);
+        wall2.GetComponent<BoxCollider>().size = new Vector3(1f, 1.85f, 0.2f);
         wall2.GetComponent<BoxCollider>().center = new Vector3(0.46f, 0, 0f);
 
-        if(Random.value <= 0.2 && PlayerPrefs.GetInt("Level") >= 3)
+        if(Random.value <= 0.2 && PlayerPrefs.GetInt("Level") >= 5)
         {
             smallWall = true;
         }
@@ -78,13 +79,13 @@ public class Wall : MonoBehaviour
 
         if (smallWall)
         {
-            GameObject wallFragmentChild = wall1.transform.GetChild(25).gameObject;
+            GameObject wallFragmentChild = wall1.transform.GetChild(12).gameObject;
             AddStar(wallFragmentChild);
         }
 
         else
         {
-            GameObject wallFragmentChild = wall1.transform.GetChild(14).gameObject;
+            GameObject wallFragmentChild = wall1.transform.GetChild(10).gameObject;
             AddStar(wallFragmentChild);
         }
         
