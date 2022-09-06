@@ -10,6 +10,8 @@ TagManager:
   - ColorBump
   - Star
   - Wall1
+  - StartButton
+  - HitDeneme
   layers:
   - Default
   - TransparentFX

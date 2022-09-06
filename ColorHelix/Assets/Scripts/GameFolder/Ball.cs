@@ -9,24 +9,32 @@ public class Ball : MonoBehaviour
 
     private static Color currentColor;
 
-    private MeshRenderer meshRenderer;
-    private SpriteRenderer splash;
+    //private MeshRenderer meshRenderer;
+    private SkinnedMeshRenderer meshRenderer;
+    //private SpriteRenderer splash;
+    private BoxCollider bCollider;
 
-    public float height = 0.58f, speed = 6;
+    public float height = 0.58f, speed = 0.11f;
     private float lerpAmount;
 
     private bool move, isRising, gameOver, displayed;
     public bool perfectStar;
-
+    
     private AudioSource failSound, hitSound, levelCompleteSound;
+    private Rigidbody rb;
 
     void Awake()
     {
         failSound = GameObject.Find("FailSound").GetComponent<AudioSource>();
         hitSound = GameObject.Find("HitSound").GetComponent<AudioSource>();
         levelCompleteSound = GameObject.Find("LevelCompleteSound").GetComponent<AudioSource>();
-        meshRenderer = GetComponent<MeshRenderer>();
-        splash = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        //meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer = GameObject.Find("Simple.Character").GetComponent<SkinnedMeshRenderer>();
+        bCollider = GetComponent<BoxCollider>();
+
+        rb= GetComponent<Rigidbody>();
+        //splash = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        
     }
 
     void Start()
@@ -40,15 +48,17 @@ public class Ball : MonoBehaviour
         if (Touch.IsPressing() && !gameOver)
         {
             move = true;
-            GetComponent<SphereCollider>().enabled = true;
+            bCollider.enabled = true;
         }
 
         if (move)
-            Ball.z += speed * 0.025f;
+            Ball.z += speed;
 
         transform.position = new Vector3(0, height, Ball.z);
 
         displayed = false;
+ 
+
         UpdateColor();
     }
 
@@ -61,6 +71,8 @@ public class Ball : MonoBehaviour
             currentColor = Color.Lerp(meshRenderer.material.color, GameObject.FindGameObjectWithTag("ColorBump").GetComponent<ColorBump>().GetColor()
                 , lerpAmount);
             lerpAmount += Time.deltaTime;
+
+            
         }
         if (lerpAmount >= 1)
             isRising = false;
@@ -82,9 +94,9 @@ public class Ball : MonoBehaviour
     }
     
 
-    void OnTriggerEnter(Collider target)
+    void OnCollisionEnter(Collision target)
     {
-        if (target.tag == "Hit")
+        if (target.collider.tag == "Hit")
         {
             if (perfectStar && !displayed)
             {
@@ -102,26 +114,31 @@ public class Ball : MonoBehaviour
             Destroy(target.transform.parent.gameObject);
         }
 
-        if (target.tag == "ColorBump")
+        if (target.collider.tag == "ColorBump")
         {
             lerpAmount = 0;
-            speed += 0.1f;
+            speed += 0.01f;
             isRising = true;
         }
 
-        if (target.tag == "Fail")
+        if (target.collider.tag == "Fail")
         {
             StartCoroutine(GameOver());
         }
 
-        if (target.CompareTag("FinishLine"))
+        if (target.collider.CompareTag("FinishLine"))
         {
             StartCoroutine(PlayNewLevel());
         }
 
-        if (target.tag == "Star")
+        if (target.collider.tag == "Star")
         {
             perfectStar = true;
+        }
+
+        if(target.collider.tag == "HitDeneme")
+        {
+            print("çarpýyom ya");
         }
     }
 
@@ -142,20 +159,20 @@ public class Ball : MonoBehaviour
     {
         failSound.Play();
         gameOver = true;
-        splash.color = currentColor;
-        splash.transform.position = new Vector3(0, 0.7f, Ball.z - 0.05f);
-        splash.transform.eulerAngles = new Vector3(0, 0, Random.value * 360);
-        splash.enabled = true;
+        //splash.color = currentColor;
+        //splash.transform.position = new Vector3(0, 0.7f, Ball.z - 0.05f);
+        //splash.transform.eulerAngles = new Vector3(0, 0, Random.value * 360);
+        //splash.enabled = true;
 
         meshRenderer.enabled = false;
-        GetComponent<SphereCollider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = false;
         move = false;
         yield return new WaitForSeconds(1.5f);
         Camera.main.GetComponent<CameraFollow>().Flash();
         gameOver = false;
         z = 0;
         GameController.instance.GenerateLevel();
-        splash.enabled = false;
+        //splash.enabled = false;
         meshRenderer.enabled = true;
     }
 

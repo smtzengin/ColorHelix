@@ -363,6 +363,7 @@
 "Assets/Scripts/UI/FirstPage.cs"
 "Assets/Scripts/UI/Level.cs"
 "Assets/Scripts/UI/PointDisplay.cs"
+"Assets/Scripts/UI/PressToPlay.cs"
 "Assets/Scripts/UI/Score.cs"
 "Assets/Scripts/UI/Touch.cs"
 -langversion:9.0

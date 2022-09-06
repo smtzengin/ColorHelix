@@ -93,8 +93,15 @@ public class GameController : MonoBehaviour
             wallsSpawnNumber = 14;
         else if (PlayerPrefs.GetInt("Level") >= 5 && PlayerPrefs.GetInt("Level") <= 10)
             wallsSpawnNumber = 16;
-        else
+        
+        else if (PlayerPrefs.GetInt("Level") >= 11 && PlayerPrefs.GetInt("Level") <= 20)
             wallsSpawnNumber = 18;
+
+        else if (PlayerPrefs.GetInt("Level") >= 21  && PlayerPrefs.GetInt("Level") <= 30)
+            wallsSpawnNumber = 20;
+
+        else
+            wallsSpawnNumber = 22;
 
         z = 6;
 
