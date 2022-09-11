@@ -360,6 +360,7 @@
 "Assets/Scripts/GameFolder/ParticleController.cs"
 "Assets/Scripts/GameFolder/Wall.cs"
 "Assets/Scripts/GameFolder/WallFragment.cs"
+"Assets/Scripts/UI/Canvas.cs"
 "Assets/Scripts/UI/FirstPage.cs"
 "Assets/Scripts/UI/Level.cs"
 "Assets/Scripts/UI/PointDisplay.cs"

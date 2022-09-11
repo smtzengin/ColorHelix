@@ -20,15 +20,15 @@ public class CameraFollow : MonoBehaviour
         if(time < 1)
         {
             time += Time.deltaTime * speed;
-            cameraZ = Mathf.Lerp(transform.position.z, -2.2f, time);
+            cameraZ = Mathf.Lerp(transform.position.z, -2.5f, time);
         }
         else
         {
-            cameraZ = Ball.GetZ() - 2.2f;
+            cameraZ = Ball.GetZ() - 2.5f;
         }
 
         
-        transform.position = new Vector3(0, 2.2f, cameraZ);
+        transform.position = new Vector3(0, 2.5f, cameraZ);
     }
 
 

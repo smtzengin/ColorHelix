@@ -314,9 +314,11 @@
 "Assets/Scripts/GameFolder/ParticleController.cs"
 "Assets/Scripts/GameFolder/Wall.cs"
 "Assets/Scripts/GameFolder/WallFragment.cs"
+"Assets/Scripts/UI/Canvas.cs"
 "Assets/Scripts/UI/FirstPage.cs"
 "Assets/Scripts/UI/Level.cs"
 "Assets/Scripts/UI/PointDisplay.cs"
+"Assets/Scripts/UI/PressToPlay.cs"
 "Assets/Scripts/UI/Score.cs"
 "Assets/Scripts/UI/Touch.cs"
 -langversion:9.0

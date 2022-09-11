@@ -16,7 +16,7 @@ public class ColorBump : MonoBehaviour
     private void Start()
     {
         transform.parent = null;
-        transform.rotation = Quaternion.EulerRotation(Vector3.zero);
+        transform.rotation = Quaternion.Euler(Vector3.zero);
         color = GameController.instance.colors[Random.Range(0, GameController.instance.colors.Length)];
         meshRenderer.material.color = color;
     }

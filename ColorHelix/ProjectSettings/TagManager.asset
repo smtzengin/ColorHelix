@@ -12,6 +12,7 @@ TagManager:
   - Wall1
   - StartButton
   - HitDeneme
+  - HardWalls
   layers:
   - Default
   - TransparentFX

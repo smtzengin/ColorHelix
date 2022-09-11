@@ -23,6 +23,7 @@ public class Ball : MonoBehaviour
     private AudioSource failSound, hitSound, levelCompleteSound;
     private Rigidbody rb;
 
+    //private Animator anim;
     void Awake()
     {
         failSound = GameObject.Find("FailSound").GetComponent<AudioSource>();
@@ -92,11 +93,11 @@ public class Ball : MonoBehaviour
     {
         return currentColor;
     }
-    
+
 
     void OnCollisionEnter(Collision target)
     {
-        if (target.collider.tag == "Hit")
+        if (target.gameObject.tag == "Hit")
         {
             if (perfectStar && !displayed)
             {
@@ -114,33 +115,32 @@ public class Ball : MonoBehaviour
             Destroy(target.transform.parent.gameObject);
         }
 
-        if (target.collider.tag == "ColorBump")
+        if (target.gameObject.tag == "ColorBump")
         {
             lerpAmount = 0;
             speed += 0.01f;
             isRising = true;
         }
 
-        if (target.collider.tag == "Fail")
+        if (target.gameObject.tag == "Fail")
         {
             StartCoroutine(GameOver());
         }
 
-        if (target.collider.CompareTag("FinishLine"))
+        if (target.gameObject.CompareTag("FinishLine"))
         {
             StartCoroutine(PlayNewLevel());
         }
 
-        if (target.collider.tag == "Star")
+        if (target.gameObject.tag == "Star")
         {
             perfectStar = true;
         }
 
-        if(target.collider.tag == "HitDeneme")
-        {
-            print("çarpýyom ya");
-        }
+
     }
+
+   
 
     IEnumerator PlayNewLevel()
     {
@@ -149,9 +149,11 @@ public class Ball : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         move = false;
         Camera.main.GetComponent<CameraFollow>().Flash();
+
         PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
         Camera.main.GetComponent<CameraFollow>().enabled = true;
         Ball.z = 0;
+
         GameController.instance.GenerateLevel();
     }
 
@@ -159,20 +161,19 @@ public class Ball : MonoBehaviour
     {
         failSound.Play();
         gameOver = true;
-        //splash.color = currentColor;
-        //splash.transform.position = new Vector3(0, 0.7f, Ball.z - 0.05f);
-        //splash.transform.eulerAngles = new Vector3(0, 0, Random.value * 360);
-        //splash.enabled = true;
 
         meshRenderer.enabled = false;
+        
         GetComponent<BoxCollider>().enabled = false;
+        //GetComponent<SphereCollider>().enabled = false;
+
         move = false;
         yield return new WaitForSeconds(1.5f);
         Camera.main.GetComponent<CameraFollow>().Flash();
         gameOver = false;
         z = 0;
         GameController.instance.GenerateLevel();
-        //splash.enabled = false;
+        
         meshRenderer.enabled = true;
     }
 

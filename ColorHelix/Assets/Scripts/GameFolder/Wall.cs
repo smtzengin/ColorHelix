@@ -43,6 +43,7 @@ public class Wall : MonoBehaviour
         wall2.GetComponent<BoxCollider>().size = new Vector3(0.9f, 1.85f, 0.2f);
         wall2.GetComponent<BoxCollider>().center = new Vector3(0.46f, 0, 0);
 
+
         if (Random.value <= 0.2 && PlayerPrefs.GetInt("Level") >= 3) smallWall = true;
 
         if (smallWall)
