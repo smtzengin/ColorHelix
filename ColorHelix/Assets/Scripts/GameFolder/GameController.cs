@@ -24,7 +24,7 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         instance = this;
-        GenerateColors();
+        GenerateColors();             
         PlayerPrefs.GetInt("Level", 1);
     }
 
@@ -43,6 +43,12 @@ public class GameController : MonoBehaviour
     public void GenerateLevel()
     {
         GenerateColors();
+
+        if(PlayerPrefs.GetInt("Level") == 0)
+        {
+            PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
+        }
+
 
         if (PlayerPrefs.GetInt("Level") >= 1 && PlayerPrefs.GetInt("Level") <= 4)
             wallsSpawnNumber = 12;

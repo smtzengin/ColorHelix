@@ -90,6 +90,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: Canvas
     methodName: closeSettingsPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: Canvas
+    methodName: ResetLevel
   sceneClasses:
     Assets/Scenes/LevelStart.unity:
     - Class: 1
@@ -137,63 +140,63 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1680}
+      Script: {instanceID: 1776}
     - Class: 114
-      Script: {instanceID: 1684}
+      Script: {instanceID: 1780}
     - Class: 114
-      Script: {instanceID: 2302}
+      Script: {instanceID: 2400}
     - Class: 114
-      Script: {instanceID: 2494}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2610}
+      Script: {instanceID: 2708}
     - Class: 114
-      Script: {instanceID: 2740}
+      Script: {instanceID: 2838}
     - Class: 114
-      Script: {instanceID: 2966}
+      Script: {instanceID: 3064}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 3364}
     - Class: 114
-      Script: {instanceID: 4108}
+      Script: {instanceID: 4206}
     - Class: 114
-      Script: {instanceID: 4330}
+      Script: {instanceID: 4428}
     - Class: 114
-      Script: {instanceID: 4598}
+      Script: {instanceID: 4696}
     - Class: 114
-      Script: {instanceID: 4716}
+      Script: {instanceID: 4816}
     - Class: 114
-      Script: {instanceID: 4726}
-    - Class: 114
-      Script: {instanceID: 5270}
-    - Class: 114
-      Script: {instanceID: 5280}
+      Script: {instanceID: 4826}
     - Class: 114
       Script: {instanceID: 5370}
     - Class: 114
-      Script: {instanceID: 5640}
+      Script: {instanceID: 5380}
     - Class: 114
-      Script: {instanceID: 5652}
+      Script: {instanceID: 5472}
     - Class: 114
-      Script: {instanceID: 5848}
+      Script: {instanceID: 5742}
     - Class: 114
-      Script: {instanceID: 5986}
+      Script: {instanceID: 5754}
     - Class: 114
-      Script: {instanceID: 5994}
+      Script: {instanceID: 5952}
     - Class: 114
-      Script: {instanceID: 6076}
+      Script: {instanceID: 6092}
     - Class: 114
-      Script: {instanceID: 6140}
+      Script: {instanceID: 6100}
     - Class: 114
-      Script: {instanceID: 6484}
+      Script: {instanceID: 6182}
     - Class: 114
-      Script: {instanceID: 6822}
+      Script: {instanceID: 6248}
     - Class: 114
-      Script: {instanceID: 6970}
+      Script: {instanceID: 6592}
     - Class: 114
-      Script: {instanceID: 7304}
+      Script: {instanceID: 6930}
     - Class: 114
-      Script: {instanceID: 7992}
+      Script: {instanceID: 7078}
     - Class: 114
-      Script: {instanceID: 8292}
+      Script: {instanceID: 7412}
+    - Class: 114
+      Script: {instanceID: 8100}
+    - Class: 114
+      Script: {instanceID: 8400}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -643,7 +646,7 @@ ScriptsOnlyBuild:
     className: UnityOnCancelMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: fe4e6a7229d27104dee9f4b11ef85c4e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Helix
@@ -781,7 +784,7 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
-      Hash: bc471e3237ba417af15c755bdcea3432
+      Hash: 3c2bf60d139f2583271cbd32a80d2e06
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ball
@@ -799,7 +802,7 @@ ScriptsOnlyBuild:
     className: StateGraphAsset
   - hash:
       serializedVersion: 2
-      Hash: 1da24befd1de5cc5c6ee17e5f4a296a9
+      Hash: afafe8462672f1bf20e65090ca2bc0b2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Canvas

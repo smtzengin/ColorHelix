@@ -10,6 +10,7 @@ public class Canvas : MonoBehaviour
    [SerializeField] private Slider audioSlider;
    [SerializeField] private TextMeshProUGUI sliderText;
    [SerializeField] private int sliderValue;
+   [SerializeField] private Button resetLevel;
 
 
     private void Start()
@@ -64,4 +65,18 @@ public class Canvas : MonoBehaviour
         Application.Quit();
     }
 
+
+    public void ResetLevel()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
+        StartCoroutine(ResetLevelAsync());
+    }
+
+    IEnumerator ResetLevelAsync()
+    {
+        yield return new WaitForSeconds(1.5f);
+        Camera.main.GetComponent<CameraFollow>().Flash();
+        GameController.instance.GenerateLevel();
+    }
 }

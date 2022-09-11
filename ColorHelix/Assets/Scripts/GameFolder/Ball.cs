@@ -23,7 +23,8 @@ public class Ball : MonoBehaviour
     private AudioSource failSound, hitSound, levelCompleteSound;
     private Rigidbody rb;
 
-    //private Animator anim;
+    private bool isDead;
+    [SerializeField] private Animator anim;
     void Awake()
     {
         failSound = GameObject.Find("FailSound").GetComponent<AudioSource>();
@@ -41,6 +42,7 @@ public class Ball : MonoBehaviour
     void Start()
     {
         move = false;
+        isDead = false;
         SetColor(GameController.instance.hitColor);
     }
 
@@ -140,7 +142,7 @@ public class Ball : MonoBehaviour
 
     }
 
-   
+
 
     IEnumerator PlayNewLevel()
     {
@@ -161,16 +163,19 @@ public class Ball : MonoBehaviour
     {
         failSound.Play();
         gameOver = true;
-
-        meshRenderer.enabled = false;
-        
+        //meshRenderer.enabled = false;
         GetComponent<BoxCollider>().enabled = false;
         //GetComponent<SphereCollider>().enabled = false;
 
         move = false;
+        isDead = true;
+        anim.SetBool("isDead",true);
+
         yield return new WaitForSeconds(1.5f);
         Camera.main.GetComponent<CameraFollow>().Flash();
         gameOver = false;
+        isDead = false;
+        anim.SetBool("isDead", false);
         z = 0;
         GameController.instance.GenerateLevel();
         

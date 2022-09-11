@@ -28,7 +28,7 @@ public class Helix : MonoBehaviour
 
         transform.eulerAngles = new Vector3(0, 0, angle);
 
-        CheckHardWalls();
+       CheckHardWalls();
     }
 
     private float GetMouseX()
@@ -47,8 +47,7 @@ public class Helix : MonoBehaviour
             {
                 if(hardWalls.transform.childCount == 0)
                 {
-                    Destroy(hardWalls);
-                   
+                    Destroy(hardWalls);     
                 }
             }
         }
