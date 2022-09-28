@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 public class Canvas : MonoBehaviour
 {
    [SerializeField] private GameObject settingsButton;
@@ -25,16 +26,21 @@ public class Canvas : MonoBehaviour
 
     public void openSettingsPanel()
     {
-        settingsPanel.SetActive(true);
-        settingsButton.SetActive(false);
         
+        settingsPanel.SetActive(true);
+
+        settingsPanel.GetComponent<RectTransform>().DOMoveY(1000, 1);
+
+        settingsButton.SetActive(false);
+        Ball.instance.PauseMove();     
+
     }
 
     public void closeSettingsPanel()
     {
         settingsButton.SetActive(true);
         settingsPanel.SetActive(false);
-        
+        Ball.instance.ResumeMove();
     }
 
 
@@ -64,19 +70,5 @@ public class Canvas : MonoBehaviour
     {
         Application.Quit();
     }
-
-
-    public void ResetLevel()
-    {
-        PlayerPrefs.DeleteAll();
-        PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
-        StartCoroutine(ResetLevelAsync());
-    }
-
-    IEnumerator ResetLevelAsync()
-    {
-        yield return new WaitForSeconds(1.5f);
-        Camera.main.GetComponent<CameraFollow>().Flash();
-        GameController.instance.GenerateLevel();
-    }
+    
 }

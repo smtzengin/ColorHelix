@@ -9,7 +9,7 @@ public class ParticleController : MonoBehaviour
 
     private void Start()
     {
-        //particle.startColor = Ball.GetColor();
+        //particle.startColor = Ball.currentColor;
     }
     private void Awake()
     {

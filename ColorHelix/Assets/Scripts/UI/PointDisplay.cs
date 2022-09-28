@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PointDisplay : MonoBehaviour
 {
-    private TextMesh textMesh;
 
+    private TextMesh textMesh;
 
     void Awake()
     {
@@ -16,11 +16,17 @@ public class PointDisplay : MonoBehaviour
     {
         this.textMesh.text = text;
         textMesh.color = Color.white;
+
+        if(Ball.instance.perfectStar == true)
+        {
+            textMesh.color = Color.cyan;
+        }
     }
 
     void LateUpdate()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, Ball.GetZ());
         Destroy(gameObject, 1.2f);
+        Ball.instance.Displayed = false;
     }
 }

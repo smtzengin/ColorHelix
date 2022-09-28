@@ -17,7 +17,7 @@ public class GameController : MonoBehaviour
 
     public int score;
     private int wallsSpawnNumber = 11, wallsCount = 0;
-    private float z = 7;
+    private float z = 6;
 
     private bool colorBump;
 
@@ -31,6 +31,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         GenerateLevel();
+       
     }
 
     private void Update()
@@ -50,23 +51,23 @@ public class GameController : MonoBehaviour
         }
 
 
-        if (PlayerPrefs.GetInt("Level") >= 1 && PlayerPrefs.GetInt("Level") <= 4)
-            wallsSpawnNumber = 12;
-        else if (PlayerPrefs.GetInt("Level") >= 5 && PlayerPrefs.GetInt("Level") <= 10)
-            wallsSpawnNumber = 13;
-        else if (PlayerPrefs.GetInt("Level") >= 15 && PlayerPrefs.GetInt("Level") <= 25)
-            wallsSpawnNumber = 14;
-        else if (PlayerPrefs.GetInt("Level") >= 25 && PlayerPrefs.GetInt("Level") <= 45)
-            wallsSpawnNumber = 15;
-        else if (PlayerPrefs.GetInt("Level") >= 45 && PlayerPrefs.GetInt("Level") <= 60)
-            wallsSpawnNumber = 16;
-        else if (PlayerPrefs.GetInt("Level") >= 60 && PlayerPrefs.GetInt("Level") <= 100)
+        if (PlayerPrefs.GetInt("Level") >= 1 && PlayerPrefs.GetInt("Level") <= 10)
             wallsSpawnNumber = 17;
+        else if (PlayerPrefs.GetInt("Level") >= 11 && PlayerPrefs.GetInt("Level") <= 50)
+            wallsSpawnNumber = 18;
+        else if (PlayerPrefs.GetInt("Level") >= 51 && PlayerPrefs.GetInt("Level") <= 100)
+            wallsSpawnNumber = 19;
+        else if (PlayerPrefs.GetInt("Level") >= 101 && PlayerPrefs.GetInt("Level") <= 150)
+            wallsSpawnNumber = 20;
+        else if (PlayerPrefs.GetInt("Level") >= 151 && PlayerPrefs.GetInt("Level") <= 200)
+            wallsSpawnNumber = 21;
+        else if (PlayerPrefs.GetInt("Level") >= 201 && PlayerPrefs.GetInt("Level") <= 400)
+            wallsSpawnNumber = 22;
 
         else
             wallsSpawnNumber = 14;
 
-        z = 7;
+        z = 6;
 
         DeleteWalls();
         colorBump = false;
@@ -102,8 +103,8 @@ public class GameController : MonoBehaviour
             wallsCount = walls1.Length;
             if (GameObject.Find("Ball").GetComponent<Ball>().perfectStar)
             {
-                GameObject.Find("Ball").GetComponent<Ball>().perfectStar = false;
                 score += PlayerPrefs.GetInt("Level") * 2;
+                GameObject.Find("Ball").GetComponent<Ball>().perfectStar = false;    
             }
             else
             {
@@ -134,25 +135,44 @@ public class GameController : MonoBehaviour
         {
             GameObject wall;
 
-            if (Random.value <= 0.2 && !colorBump && PlayerPrefs.GetInt("Level") >= 3)
+            if (Random.value <= 0.2 && !colorBump && PlayerPrefs.GetInt("Level") >= 10)
             {
                 colorBump = true;
                 wall = Instantiate(Resources.Load("ColorBump") as GameObject, transform.position, Quaternion.identity);
             }
-            else if (Random.value <= 0.2 && PlayerPrefs.GetInt("Level") >= 6)
+            else if (Random.value <= 0.1 && PlayerPrefs.GetInt("Level") >= 6)
             {
                 wall = Instantiate(Resources.Load("HardWalls") as GameObject, transform.position, Quaternion.identity);
              
+            }
+            else if (Random.value <= 0.2 && PlayerPrefs.GetInt("Level") >= 50)
+            {
+                wall = Instantiate(Resources.Load("HardWalls") as GameObject, transform.position, Quaternion.identity);
+
+            }
+            else if (Random.value <= 0.4 && PlayerPrefs.GetInt("Level") >= 100)
+            {
+                wall = Instantiate(Resources.Load("HardWalls") as GameObject, transform.position, Quaternion.identity);
+
+            }
+            else if (Random.value <= 0.7 && PlayerPrefs.GetInt("Level") >= 200)
+            {
+                wall = Instantiate(Resources.Load("HardWalls") as GameObject, transform.position, Quaternion.identity);
+
             }
             else if (i >= wallsSpawnNumber - 1 && !colorBump && PlayerPrefs.GetInt("Level") >= 3)
             {
                 colorBump = true;
                 wall = Instantiate(Resources.Load("ColorBump") as GameObject, transform.position, Quaternion.identity);
             }
+
+
             else
             {
                 wall = Instantiate(Resources.Load("Wall") as GameObject, transform.position, Quaternion.identity);
             }
+
+
 
             wall.transform.SetParent(GameObject.Find("Helix").transform);
             wall.transform.localPosition = new Vector3(0, 0, z);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class CameraFollow : MonoBehaviour
 {
@@ -38,4 +39,6 @@ public class CameraFollow : MonoBehaviour
         cameraZ = 0;
         time = 0;
     }
+
+   
 }

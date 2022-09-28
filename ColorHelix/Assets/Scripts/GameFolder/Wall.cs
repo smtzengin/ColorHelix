@@ -43,6 +43,9 @@ public class Wall : MonoBehaviour
         wall2.GetComponent<BoxCollider>().size = new Vector3(0.9f, 1.85f, 0.2f);
         wall2.GetComponent<BoxCollider>().center = new Vector3(0.46f, 0, 0);
 
+        wall1.AddComponent<BoxCollider>();
+        wall1.GetComponent<BoxCollider>().isTrigger = true;
+
         if (Random.value <= 0.2 && PlayerPrefs.GetInt("Level") >= 3) smallWall = true;
 
         if (smallWall)
@@ -58,7 +61,7 @@ public class Wall : MonoBehaviour
             if (rotationZ <= rotationZMax)
             {
                 WallF.transform.SetParent(wall1.transform);
-                WallF.gameObject.tag = "Hit";
+                WallF.gameObject.tag = "Hit";           
             }
             else
                 WallF.transform.SetParent(wall2.transform);

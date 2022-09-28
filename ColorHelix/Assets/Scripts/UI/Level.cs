@@ -77,7 +77,7 @@ public class Level : MonoBehaviour
         }
         if (checkLevel % 5 == 2)
         {
-            color = Color.Lerp(Color.green, Color.gray, 1f);
+            color = Color.Lerp(Color.green, Color.cyan, 1f);
         }
         if (checkLevel % 5 == 3)
         {

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6696217166556456332}
   - component: {fileID: 6696217166556456339}
-  - component: {fileID: 6696217166556456338}
+  - component: {fileID: 2567914242519765844}
   m_Layer: 0
   m_Name: PerfectStar
   m_TagString: Star
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &6696217166556456338
+--- !u!65 &2567914242519765844
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,8 +93,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6696217166556456337}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.91, y: 2.0318985, z: 0.24916306}
-  m_Center: {x: 0, y: -0.07067243, z: -0.024581514}
+  m_Size: {x: 1, y: 1, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}

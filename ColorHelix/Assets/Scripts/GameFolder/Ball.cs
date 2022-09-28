@@ -1,41 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
 
+    public static Ball instance;
+
     private static float z;
 
-    private static Color currentColor;
+    public static Color currentColor;
 
-    //private MeshRenderer meshRenderer;
     private SkinnedMeshRenderer meshRenderer;
-    //private SpriteRenderer splash;
+
     private BoxCollider bCollider;
 
     public float height = 0.58f, speed = 0.11f;
     private float lerpAmount;
 
-    private bool move, isRising, gameOver, displayed;
+    private bool move, isRising, gameOver, displayed ,isPaused;
+    
     public bool perfectStar;
+
+    public bool Displayed
+    {
+        get { return displayed; }    
+        set { displayed = value; }
+    }
+
+    
+
     
     private AudioSource failSound, hitSound, levelCompleteSound;
     private Rigidbody rb;
 
     private bool isDead;
-    [SerializeField] private Animator anim;
+    [SerializeField] private Animator anim; 
+    [SerializeField] private GameObject touch;
     void Awake()
     {
+        instance = this;
+
         failSound = GameObject.Find("FailSound").GetComponent<AudioSource>();
         hitSound = GameObject.Find("HitSound").GetComponent<AudioSource>();
         levelCompleteSound = GameObject.Find("LevelCompleteSound").GetComponent<AudioSource>();
-        //meshRenderer = GetComponent<MeshRenderer>();
+        
         meshRenderer = GameObject.Find("Simple.Character").GetComponent<SkinnedMeshRenderer>();
         bCollider = GetComponent<BoxCollider>();
 
         rb= GetComponent<Rigidbody>();
-        //splash = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        
         
     }
 
@@ -55,15 +70,20 @@ public class Ball : MonoBehaviour
         }
 
         if (move)
-            Ball.z += speed;
+            Ball.z += speed * 0.025f;
+            
+        
 
         transform.position = new Vector3(0, height, Ball.z);
 
+       
         displayed = false;
- 
 
         UpdateColor();
+   
     }
+
+
 
     void UpdateColor()
     {
@@ -95,6 +115,7 @@ public class Ball : MonoBehaviour
     {
         return currentColor;
     }
+    
 
 
     void OnCollisionEnter(Collision target)
@@ -104,13 +125,13 @@ public class Ball : MonoBehaviour
             if (perfectStar && !displayed)
             {
                 displayed = true;
-                GameObject pointDisplay = Instantiate(Resources.Load("PointDisplay"), transform.position, Quaternion.identity) as GameObject;
+                GameObject pointDisplay = Instantiate(Resources.Load("PointDisplayPerfect"), transform.position, Quaternion.identity) as GameObject;
                 pointDisplay.GetComponent<PointDisplay>().SetText("PERFECT +" + PlayerPrefs.GetInt("Level") * 2);
             }
             else if (!perfectStar && !displayed)
             {
                 displayed = true;
-                GameObject pointDisplay = Instantiate(Resources.Load("PointDisplay"), transform.position, Quaternion.identity) as GameObject;
+                GameObject pointDisplay = Instantiate(Resources.Load("PointDisplayPerfect"), transform.position, Quaternion.identity) as GameObject;
                 pointDisplay.GetComponent<PointDisplay>().SetText("+" + PlayerPrefs.GetInt("Level"));
             }
             hitSound.Play();
@@ -120,7 +141,6 @@ public class Ball : MonoBehaviour
         if (target.gameObject.tag == "ColorBump")
         {
             lerpAmount = 0;
-            speed += 0.01f;
             isRising = true;
         }
 
@@ -134,14 +154,15 @@ public class Ball : MonoBehaviour
             StartCoroutine(PlayNewLevel());
         }
 
+    }
+
+    private void OnTriggerEnter(Collider target)
+    {
         if (target.gameObject.tag == "Star")
         {
             perfectStar = true;
         }
-
-
     }
-
 
 
     IEnumerator PlayNewLevel()
@@ -162,10 +183,9 @@ public class Ball : MonoBehaviour
     IEnumerator GameOver()
     {
         failSound.Play();
-        gameOver = true;
-        //meshRenderer.enabled = false;
+        gameOver = true;   
         GetComponent<BoxCollider>().enabled = false;
-        //GetComponent<SphereCollider>().enabled = false;
+        
 
         move = false;
         isDead = true;
@@ -182,4 +202,16 @@ public class Ball : MonoBehaviour
         meshRenderer.enabled = true;
     }
 
+    
+    public void PauseMove() 
+    {
+        move = false;
+        touch.SetActive(false);
+    }
+
+    public void ResumeMove()
+    {
+        move = true;
+        touch.SetActive(true);
+    }
 }
