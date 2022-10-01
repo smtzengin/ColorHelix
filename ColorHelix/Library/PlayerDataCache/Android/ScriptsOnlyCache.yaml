@@ -336,7 +336,7 @@ ScriptsOnlyBuild:
     className: ColorBump
   - hash:
       serializedVersion: 2
-      Hash: 021f52f559c2911788a8fc929fb555b0
+      Hash: fb32e10fe599c50d85abcb5242a0d252
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController

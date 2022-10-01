@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
 
     private bool colorBump;
 
+    public Material skybox;
+
     void Awake()
     {
         instance = this;
@@ -39,6 +41,13 @@ public class GameController : MonoBehaviour
         SumUpWalls();
 
         //CheckNullWalls();
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            
+            print("basýyom");
+            
+        }
     }
 
     public void GenerateLevel()
@@ -52,11 +61,11 @@ public class GameController : MonoBehaviour
 
 
         if (PlayerPrefs.GetInt("Level") >= 1 && PlayerPrefs.GetInt("Level") <= 10)
-            wallsSpawnNumber = 17;
+            wallsSpawnNumber = 14;
         else if (PlayerPrefs.GetInt("Level") >= 11 && PlayerPrefs.GetInt("Level") <= 50)
-            wallsSpawnNumber = 18;
+            wallsSpawnNumber = 17;
         else if (PlayerPrefs.GetInt("Level") >= 51 && PlayerPrefs.GetInt("Level") <= 100)
-            wallsSpawnNumber = 19;
+            wallsSpawnNumber = 18;
         else if (PlayerPrefs.GetInt("Level") >= 101 && PlayerPrefs.GetInt("Level") <= 150)
             wallsSpawnNumber = 20;
         else if (PlayerPrefs.GetInt("Level") >= 151 && PlayerPrefs.GetInt("Level") <= 200)
@@ -65,7 +74,7 @@ public class GameController : MonoBehaviour
             wallsSpawnNumber = 22;
 
         else
-            wallsSpawnNumber = 14;
+            wallsSpawnNumber = 24;
 
         z = 6;
 
@@ -186,5 +195,7 @@ public class GameController : MonoBehaviour
     }
 
     
+    
+
 
 }

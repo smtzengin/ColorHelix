@@ -16,10 +16,10 @@ public class Ball : MonoBehaviour
 
     private BoxCollider bCollider;
 
-    public float height = 0.58f, speed = 0.11f;
+    public float height = 0.58f, speed = 6;
     private float lerpAmount;
 
-    private bool move, isRising, gameOver, displayed ,isPaused;
+    private bool move, isRising, gameOver, displayed ,isPaused, isDead;
     
     public bool perfectStar;
 
@@ -35,7 +35,7 @@ public class Ball : MonoBehaviour
     private AudioSource failSound, hitSound, levelCompleteSound;
     private Rigidbody rb;
 
-    private bool isDead;
+    
     [SerializeField] private Animator anim; 
     [SerializeField] private GameObject touch;
     void Awake()
@@ -82,8 +82,6 @@ public class Ball : MonoBehaviour
         UpdateColor();
    
     }
-
-
 
     void UpdateColor()
     {
@@ -141,6 +139,7 @@ public class Ball : MonoBehaviour
         if (target.gameObject.tag == "ColorBump")
         {
             lerpAmount = 0;
+            speed += 0.1f;
             isRising = true;
         }
 
