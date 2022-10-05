@@ -17,11 +17,10 @@ public class GameController : MonoBehaviour
 
     public int score;
     private int wallsSpawnNumber = 11, wallsCount = 0;
-    private float z = 6;
+    private float z = 7;
 
     private bool colorBump;
 
-    public Material skybox;
 
     void Awake()
     {
@@ -76,7 +75,7 @@ public class GameController : MonoBehaviour
         else
             wallsSpawnNumber = 24;
 
-        z = 6;
+        z = 7;
 
         DeleteWalls();
         colorBump = false;

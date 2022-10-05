@@ -21,7 +21,9 @@ public class Ball : MonoBehaviour
 
     private bool move, isRising, gameOver, displayed ,isPaused, isDead;
     
-    public bool perfectStar;
+    public bool perfectStar, isFinishLevel;
+
+    [SerializeField] private bool isAdShowed;
 
     public bool Displayed
     {
@@ -50,7 +52,7 @@ public class Ball : MonoBehaviour
         bCollider = GetComponent<BoxCollider>();
 
         rb= GetComponent<Rigidbody>();
-        
+        isAdShowed = false;
         
     }
 
@@ -58,7 +60,9 @@ public class Ball : MonoBehaviour
     {
         move = false;
         isDead = false;
+        isFinishLevel = false;
         SetColor(GameController.instance.hitColor);
+      
     }
 
     void Update()
@@ -140,16 +144,24 @@ public class Ball : MonoBehaviour
         {
             lerpAmount = 0;
             speed += 0.1f;
+            PlayerPrefs.SetFloat("Speed", speed);
             isRising = true;
         }
 
         if (target.gameObject.tag == "Fail")
         {
             StartCoroutine(GameOver());
+            
         }
 
         if (target.gameObject.CompareTag("FinishLine"))
         {
+            isFinishLevel = true;
+            if(PlayerPrefs.GetInt("Level") % 5 == 1)
+            {
+               
+            }
+            InterstitialAD.instance.RequestInterstitial();
             StartCoroutine(PlayNewLevel());
         }
 
@@ -177,6 +189,14 @@ public class Ball : MonoBehaviour
         Ball.z = 0;
 
         GameController.instance.GenerateLevel();
+        if (PlayerPrefs.GetInt("Level") % 5 == 0)
+        {
+            
+            isAdShowed = true;
+        }
+        InterstitialAD.instance.ShowInterstitial();
+
+        isFinishLevel = false;
     }
 
     IEnumerator GameOver()
@@ -184,8 +204,6 @@ public class Ball : MonoBehaviour
         failSound.Play();
         gameOver = true;   
         GetComponent<BoxCollider>().enabled = false;
-        
-
         move = false;
         isDead = true;
         anim.SetBool("isDead",true);
@@ -196,8 +214,7 @@ public class Ball : MonoBehaviour
         isDead = false;
         anim.SetBool("isDead", false);
         z = 0;
-        GameController.instance.GenerateLevel();
-        
+        GameController.instance.GenerateLevel();  
         meshRenderer.enabled = true;
     }
 

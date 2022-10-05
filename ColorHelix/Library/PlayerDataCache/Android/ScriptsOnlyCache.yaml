@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ADManager
     - Ball
     - CameraFollow
     - Canvas
@@ -8,6 +9,7 @@ ScriptsOnlyBuild:
     - GameController
     - Helix
     - HelixCylinder
+    - InterstitialAD
     - Level
     - ParticleController
     - PointDisplay
@@ -18,6 +20,10 @@ ScriptsOnlyBuild:
     - WallFragment
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
+    GoogleMobileAds.Common.dll:
+    - GoogleMobileAds.Common.MobileAdsEventExecutor
+    GoogleMobileAds.Editor.dll:
+    - GoogleMobileAds.Editor.GoogleMobileAdsSettings
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -29,10 +35,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -93,8 +97,14 @@ ScriptsOnlyBuild:
     fullTypeName: Canvas
     methodName: openSettingsPanel
   - assembly: Assembly-CSharp
+    fullTypeName: InterstitialAD
+    methodName: ShowInterstitial
+  - assembly: Assembly-CSharp
     fullTypeName: Canvas
     methodName: closeSettingsPanel
+  - assembly: Assembly-CSharp
+    fullTypeName: InterstitialAD
+    methodName: RequestInterstitial
   sceneClasses:
     Assets/Scenes/LevelStart.unity:
     - Class: 1
@@ -201,6 +211,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 8134}
     - Class: 114
       Script: {instanceID: 8436}
+    - Class: 114
+      Script: {instanceID: 24164}
+    - Class: 114
+      Script: {instanceID: 24306}
+    - Class: 114
+      Script: {instanceID: 31694}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -798,7 +814,7 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
-      Hash: b84acc9fa346e6d7d2c690c1075cd709
+      Hash: acc7f7f598c533df52bb6797f5b7e510
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ball
@@ -1108,7 +1124,37 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ADManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: GoogleMobileAds.Common.dll
+    namespaceName: GoogleMobileAds.Common
+    className: AppStateEventClient
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: GoogleMobileAds.Common.dll
+    namespaceName: GoogleMobileAds.Common
+    className: MobileAdsEventExecutor
+  - hash:
+      serializedVersion: 2
+      Hash: 9e661962d030795b6513c8a9ec4047e3
+    assemblyName: GoogleMobileAds.Editor.dll
+    namespaceName: GoogleMobileAds.Editor
+    className: GoogleMobileAdsSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InterstitialAD
   platform: 13
   scenePathNames:
   - Assets/Scenes/LevelStart.unity
-  playerPath: C:/Users/smtzn/Desktop/colorHelix.apk
+  playerPath: C:/Users/smtzn/Desktop/deneme1.apk

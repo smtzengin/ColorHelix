@@ -5,6 +5,8 @@ INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\
 INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 MERGED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:2:1-70:12
+MERGED from [:googlemobileads-unity:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\161cadf97f5c791707d38ec01dafb541\googlemobileads-unity\AndroidManifest.xml:7:1-14:12
+MERGED from [:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:7:1-22:12
 INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
 INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:2:1-5:12
@@ -42,6 +44,8 @@ application
 ADDED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-83
 MERGED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:5-68:19
 MERGED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:5-68:19
+MERGED from [:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:16:5-20:19
+MERGED from [:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:16:5-20:19
 	android:extractNativeLibs
 		ADDED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:18-50
 	android:label
@@ -54,6 +58,10 @@ INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\
 INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 MERGED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:8:5-10:41
 MERGED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:8:5-10:41
+MERGED from [:googlemobileads-unity:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\161cadf97f5c791707d38ec01dafb541\googlemobileads-unity\AndroidManifest.xml:10:5-44
+MERGED from [:googlemobileads-unity:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\161cadf97f5c791707d38ec01dafb541\googlemobileads-unity\AndroidManifest.xml:10:5-44
+MERGED from [:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:12:5-14:41
+MERGED from [:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:12:5-14:41
 INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 INJECTED from C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -76,6 +84,8 @@ ADDED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix
 		ADDED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:14:9-55
 uses-permission#android.permission.INTERNET
 ADDED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:17:5-67
+MERGED from [:googlemobileads-unity:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\161cadf97f5c791707d38ec01dafb541\googlemobileads-unity\AndroidManifest.xml:12:5-67
+MERGED from [:googlemobileads-unity:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\161cadf97f5c791707d38ec01dafb541\googlemobileads-unity\AndroidManifest.xml:12:5-67
 	android:name
 		ADDED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:17:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
@@ -168,3 +178,9 @@ ADDED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix
 		ADDED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:67:13-47
 	android:name
 		ADDED from [:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:66:13-40
+uses-library#org.apache.http.legacy
+ADDED from [:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:17:9-19:40
+	android:required
+		ADDED from [:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:19:13-37
+	android:name
+		ADDED from [:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:18:13-50

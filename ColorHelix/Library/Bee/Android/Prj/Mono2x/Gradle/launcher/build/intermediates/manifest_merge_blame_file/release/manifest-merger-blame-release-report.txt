@@ -139,6 +139,13 @@
 76-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:66:13-40
 77            android:value="portrait|landscape" />
 77-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:67:13-47
-78    </application>
-79
-80</manifest>
+78
+79        <uses-library
+79-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:17:9-19:40
+80            android:name="org.apache.http.legacy"
+80-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:18:13-50
+81            android:required="false" />
+81-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:19:13-37
+82    </application>
+83
+84</manifest>
