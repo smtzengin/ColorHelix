@@ -37,8 +37,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        SumUpWalls();
-       
+        SumUpWalls();       
     }
 
     public void GenerateLevel()
@@ -139,6 +138,7 @@ public class GameController : MonoBehaviour
             {
                 colorBump = true;
                 wall = Instantiate(Resources.Load("ColorBump") as GameObject, transform.position, Quaternion.identity);
+                
             }
             else if (Random.value <= 0.1 && PlayerPrefs.GetInt("Level") >= 6)
             {

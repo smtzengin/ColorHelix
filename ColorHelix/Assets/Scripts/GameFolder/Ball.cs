@@ -23,6 +23,7 @@ public class Ball : MonoBehaviour
     public bool perfectStar, isFinishLevel;
 
     private float fastRun,currentSpeed;
+    [SerializeField] private GameObject particleSpawn;
     [SerializeField] private int perfectStarCount = 0; 
 
     [SerializeField] private bool isAdShowed;
@@ -66,6 +67,7 @@ public class Ball : MonoBehaviour
         isFinishLevel = false;
         SetColor(GameController.instance.hitColor);
         currentSpeed = speed;
+        
         
       
     }
@@ -163,7 +165,9 @@ public class Ball : MonoBehaviour
             if(PlayerPrefs.GetInt("Level") % 10 == 9 || PlayerPrefs.GetInt("Level") % 10 == 4)
             {
                 //InterstitialAD.instance.RequestInterstitial();
-            }     
+            }
+            StartCoroutine(CallConfetti());
+
             StartCoroutine(PlayNewLevel());
             
         }
@@ -179,7 +183,7 @@ public class Ball : MonoBehaviour
             if(perfectStar == true)
             {
                 perfectStarCount++;
-                if (perfectStarCount >= 5 && perfectStarCount <= 10)
+                if (perfectStarCount == 5 )
                 {
                     
                     StartCoroutine(FastRun());
@@ -195,7 +199,7 @@ public class Ball : MonoBehaviour
     {
         levelCompleteSound.Play();
         Camera.main.GetComponent<CameraFollow>().enabled = false;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(3f);
         move = false;
         Camera.main.GetComponent<CameraFollow>().Flash();
         
@@ -236,7 +240,7 @@ public class Ball : MonoBehaviour
         fastRun = speed;
         fastRun = fastRun * 1.25f;
         speed = fastRun;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         fastRun = currentSpeed;
         perfectStarCount = 0;
         speed = currentSpeed;
@@ -251,5 +255,19 @@ public class Ball : MonoBehaviour
     {
         move = true;
         touch.SetActive(true);
+    }
+
+    IEnumerator CallConfetti()
+    {
+        particleSpawn.transform.position = GameController.instance.finishLine.transform.position;
+        particleSpawn.transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z + 1f);
+        GameObject confetti;
+
+        confetti = Instantiate(Resources.Load("Confetti") as GameObject, particleSpawn.transform.position, Quaternion.identity);
+
+        yield return new WaitForSeconds(2f);
+
+        Destroy(confetti.gameObject);
+
     }
 }

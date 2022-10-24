@@ -21,8 +21,12 @@ public class WallFragment : MonoBehaviour
                 GameObject colorBump = GameObject.FindGameObjectWithTag("ColorBump");
 
 
-                if (transform.position.z > colorBump.transform.position.z)
-                    GameController.instance.hitColor = colorBump.GetComponent<ColorBump>().GetColor();
+                if (colorBump.gameObject.activeInHierarchy)
+                {
+                    if (transform.position.z > colorBump.transform.position.z)
+                        GameController.instance.hitColor = colorBump.GetComponent<ColorBump>().GetColor();
+                }
+                
             }
 
             meshRenderer.material.color = GameController.instance.hitColor;
