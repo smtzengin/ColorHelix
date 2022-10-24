@@ -11,9 +11,8 @@ public class Canvas : MonoBehaviour
    [SerializeField] private Slider audioSlider;
    [SerializeField] private TextMeshProUGUI sliderText;
    [SerializeField] private int sliderValue;
-   [SerializeField] private Button resetLevel;
 
-
+    
     private void Start()
     {
         LoadValue();

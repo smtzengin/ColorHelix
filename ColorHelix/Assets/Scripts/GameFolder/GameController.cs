@@ -38,15 +38,7 @@ public class GameController : MonoBehaviour
     private void Update()
     {
         SumUpWalls();
-
-        //CheckNullWalls();
-
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            
-            print("basýyom");
-            
-        }
+       
     }
 
     public void GenerateLevel()
@@ -64,7 +56,7 @@ public class GameController : MonoBehaviour
         else if (PlayerPrefs.GetInt("Level") >= 11 && PlayerPrefs.GetInt("Level") <= 50)
             wallsSpawnNumber = 17;
         else if (PlayerPrefs.GetInt("Level") >= 51 && PlayerPrefs.GetInt("Level") <= 100)
-            wallsSpawnNumber = 18;
+            wallsSpawnNumber = 19;
         else if (PlayerPrefs.GetInt("Level") >= 101 && PlayerPrefs.GetInt("Level") <= 150)
             wallsSpawnNumber = 20;
         else if (PlayerPrefs.GetInt("Level") >= 151 && PlayerPrefs.GetInt("Level") <= 200)
@@ -173,7 +165,6 @@ public class GameController : MonoBehaviour
                 colorBump = true;
                 wall = Instantiate(Resources.Load("ColorBump") as GameObject, transform.position, Quaternion.identity);
             }
-
 
             else
             {

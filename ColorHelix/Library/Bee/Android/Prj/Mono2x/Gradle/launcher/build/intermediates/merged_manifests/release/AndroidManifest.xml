@@ -3,7 +3,7 @@
     package="com.DefaultCompany.ColorHelix"
     android:installLocation="preferExternal"
     android:versionCode="1"
-    android:versionName="1.4" >
+    android:versionName="0.1" >
 
     <uses-sdk
         android:minSdkVersion="22"
@@ -79,6 +79,10 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-6689356860659400~2121665339" />
     </application>
 
 </manifest>

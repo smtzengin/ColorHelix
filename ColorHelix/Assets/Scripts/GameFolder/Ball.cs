@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class Ball : MonoBehaviour
 {
@@ -19,9 +18,12 @@ public class Ball : MonoBehaviour
     public float height = 0.58f, speed = 6;
     private float lerpAmount;
 
-    private bool move, isRising, gameOver, displayed ,isPaused, isDead;
+    private bool move, isRising, gameOver, displayed ,isPaused,isDead;
     
     public bool perfectStar, isFinishLevel;
+
+    private float fastRun,currentSpeed;
+    [SerializeField] private int perfectStarCount = 0; 
 
     [SerializeField] private bool isAdShowed;
 
@@ -49,6 +51,7 @@ public class Ball : MonoBehaviour
         levelCompleteSound = GameObject.Find("LevelCompleteSound").GetComponent<AudioSource>();
         
         meshRenderer = GameObject.Find("Simple.Character").GetComponent<SkinnedMeshRenderer>();
+        
         bCollider = GetComponent<BoxCollider>();
 
         rb= GetComponent<Rigidbody>();
@@ -62,6 +65,8 @@ public class Ball : MonoBehaviour
         isDead = false;
         isFinishLevel = false;
         SetColor(GameController.instance.hitColor);
+        currentSpeed = speed;
+        
       
     }
 
@@ -75,8 +80,6 @@ public class Ball : MonoBehaviour
 
         if (move)
             Ball.z += speed * 0.025f;
-            
-        
 
         transform.position = new Vector3(0, height, Ball.z);
 
@@ -157,12 +160,12 @@ public class Ball : MonoBehaviour
         if (target.gameObject.CompareTag("FinishLine"))
         {
             isFinishLevel = true;
-            if(PlayerPrefs.GetInt("Level") % 5 == 1)
+            if(PlayerPrefs.GetInt("Level") % 10 == 9 || PlayerPrefs.GetInt("Level") % 10 == 4)
             {
-               
-            }
-            InterstitialAD.instance.RequestInterstitial();
+                //InterstitialAD.instance.RequestInterstitial();
+            }     
             StartCoroutine(PlayNewLevel());
+            
         }
 
     }
@@ -172,7 +175,19 @@ public class Ball : MonoBehaviour
         if (target.gameObject.tag == "Star")
         {
             perfectStar = true;
+
+            if(perfectStar == true)
+            {
+                perfectStarCount++;
+                if (perfectStarCount >= 5 && perfectStarCount <= 10)
+                {
+                    
+                    StartCoroutine(FastRun());
+                    
+                }
+            }
         }
+
     }
 
 
@@ -183,19 +198,17 @@ public class Ball : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         move = false;
         Camera.main.GetComponent<CameraFollow>().Flash();
-
+        
         PlayerPrefs.SetInt("Level", PlayerPrefs.GetInt("Level") + 1);
         Camera.main.GetComponent<CameraFollow>().enabled = true;
         Ball.z = 0;
 
         GameController.instance.GenerateLevel();
         if (PlayerPrefs.GetInt("Level") % 5 == 0)
-        {
-            
+        {      
             isAdShowed = true;
+            //InterstitialAD.instance.ShowInterstitial();
         }
-        InterstitialAD.instance.ShowInterstitial();
-
         isFinishLevel = false;
     }
 
@@ -218,7 +231,16 @@ public class Ball : MonoBehaviour
         meshRenderer.enabled = true;
     }
 
-    
+    IEnumerator FastRun()
+    {
+        fastRun = speed;
+        fastRun = fastRun * 1.25f;
+        speed = fastRun;
+        yield return new WaitForSeconds(1f);
+        fastRun = currentSpeed;
+        perfectStarCount = 0;
+        speed = currentSpeed;
+    }
     public void PauseMove() 
     {
         move = false;

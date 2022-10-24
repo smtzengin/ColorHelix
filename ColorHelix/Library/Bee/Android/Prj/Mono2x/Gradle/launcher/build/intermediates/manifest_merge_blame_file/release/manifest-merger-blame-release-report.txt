@@ -3,7 +3,7 @@
 3    package="com.DefaultCompany.ColorHelix"
 4    android:installLocation="preferExternal"
 5    android:versionCode="1"
-6    android:versionName="1.4" >
+6    android:versionName="0.1" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="22"
@@ -141,11 +141,18 @@
 77-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:67:13-47
 78
 79        <uses-library
-79-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:17:9-19:40
+79-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:12:9-14:40
 80            android:name="org.apache.http.legacy"
-80-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:18:13-50
+80-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:13:13-50
 81            android:required="false" />
-81-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:19:13-37
-82    </application>
-83
-84</manifest>
+81-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:14:13-37
+82
+83        <meta-data
+83-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:16:9-18:70
+84            android:name="com.google.android.gms.ads.APPLICATION_ID"
+84-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:17:13-69
+85            android:value="ca-app-pub-6689356860659400~2121665339" />
+85-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:18:13-67
+86    </application>
+87
+88</manifest>

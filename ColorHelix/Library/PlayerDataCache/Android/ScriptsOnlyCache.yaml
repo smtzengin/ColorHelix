@@ -20,8 +20,6 @@ ScriptsOnlyBuild:
     - WallFragment
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
-    GoogleMobileAds.Common.dll:
-    - GoogleMobileAds.Common.MobileAdsEventExecutor
     GoogleMobileAds.Editor.dll:
     - GoogleMobileAds.Editor.GoogleMobileAdsSettings
     Unity.Rider.Editor.dll:
@@ -152,71 +150,71 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1782}
+      Script: {instanceID: 1770}
     - Class: 114
-      Script: {instanceID: 1786}
+      Script: {instanceID: 1816}
     - Class: 114
-      Script: {instanceID: 2406}
+      Script: {instanceID: 2404}
     - Class: 114
-      Script: {instanceID: 2598}
+      Script: {instanceID: 2458}
     - Class: 114
-      Script: {instanceID: 2714}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2844}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 3070}
+      Script: {instanceID: 2770}
     - Class: 114
-      Script: {instanceID: 3370}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 3726}
+      Script: {instanceID: 3128}
     - Class: 114
-      Script: {instanceID: 4220}
+      Script: {instanceID: 3434}
     - Class: 114
-      Script: {instanceID: 4448}
+      Script: {instanceID: 3794}
     - Class: 114
-      Script: {instanceID: 4716}
+      Script: {instanceID: 4288}
     - Class: 114
-      Script: {instanceID: 4836}
+      Script: {instanceID: 4516}
     - Class: 114
-      Script: {instanceID: 4846}
+      Script: {instanceID: 4784}
     - Class: 114
-      Script: {instanceID: 5390}
+      Script: {instanceID: 4904}
     - Class: 114
-      Script: {instanceID: 5400}
+      Script: {instanceID: 4914}
     - Class: 114
-      Script: {instanceID: 5492}
+      Script: {instanceID: 5326}
     - Class: 114
-      Script: {instanceID: 5762}
+      Script: {instanceID: 5462}
     - Class: 114
-      Script: {instanceID: 5774}
+      Script: {instanceID: 5472}
     - Class: 114
-      Script: {instanceID: 5972}
+      Script: {instanceID: 5564}
     - Class: 114
-      Script: {instanceID: 6120}
+      Script: {instanceID: 5836}
     - Class: 114
-      Script: {instanceID: 6128}
+      Script: {instanceID: 5848}
     - Class: 114
-      Script: {instanceID: 6210}
+      Script: {instanceID: 6050}
     - Class: 114
-      Script: {instanceID: 6276}
+      Script: {instanceID: 6198}
     - Class: 114
-      Script: {instanceID: 6620}
+      Script: {instanceID: 6206}
     - Class: 114
-      Script: {instanceID: 6958}
+      Script: {instanceID: 6288}
     - Class: 114
-      Script: {instanceID: 7106}
+      Script: {instanceID: 6362}
     - Class: 114
-      Script: {instanceID: 7440}
+      Script: {instanceID: 6708}
     - Class: 114
-      Script: {instanceID: 8134}
+      Script: {instanceID: 7046}
     - Class: 114
-      Script: {instanceID: 8436}
+      Script: {instanceID: 7198}
     - Class: 114
-      Script: {instanceID: 24164}
+      Script: {instanceID: 7532}
     - Class: 114
-      Script: {instanceID: 24306}
+      Script: {instanceID: 8226}
     - Class: 114
-      Script: {instanceID: 31694}
+      Script: {instanceID: 8536}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -244,16 +242,16 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UIElements
-    className: PanelRaycaster
-  - hash:
-      serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UIElements
+    className: PanelRaycaster
   - hash:
       serializedVersion: 2
       Hash: 3e887c485743b39ecb68dc03250f89e4
@@ -305,6 +303,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ADManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerEnterMessageListener
@@ -349,10 +353,16 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: InterstitialAD
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: ColorBump
   - hash:
       serializedVersion: 2
-      Hash: fb32e10fe599c50d85abcb5242a0d252
+      Hash: 021f52f559c2911788a8fc929fb555b0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameController
@@ -452,6 +462,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: GoogleMobileAds.Common.dll
+    namespaceName: GoogleMobileAds.Common
+    className: AppStateEventClient
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: GoogleMobileAds.Common.dll
+    namespaceName: GoogleMobileAds.Common
+    className: MobileAdsEventExecutor
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -742,6 +764,12 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 9e661962d030795b6513c8a9ec4047e3
+    assemblyName: GoogleMobileAds.Editor.dll
+    namespaceName: GoogleMobileAds.Editor
+    className: GoogleMobileAdsSettings
+  - hash:
+      serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -814,7 +842,7 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
-      Hash: acc7f7f598c533df52bb6797f5b7e510
+      Hash: 8adce3c9d778536638261e89d71b1fde
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ball
@@ -1124,37 +1152,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ADManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: GoogleMobileAds.Common.dll
-    namespaceName: GoogleMobileAds.Common
-    className: AppStateEventClient
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: GoogleMobileAds.Common.dll
-    namespaceName: GoogleMobileAds.Common
-    className: MobileAdsEventExecutor
-  - hash:
-      serializedVersion: 2
-      Hash: 9e661962d030795b6513c8a9ec4047e3
-    assemblyName: GoogleMobileAds.Editor.dll
-    namespaceName: GoogleMobileAds.Editor
-    className: GoogleMobileAdsSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: InterstitialAD
   platform: 13
   scenePathNames:
   - Assets/Scenes/LevelStart.unity
-  playerPath: C:/Users/smtzn/Desktop/deneme1.apk
+  playerPath: C:/Users/smtzn/Desktop/Color Cylinder.apk
