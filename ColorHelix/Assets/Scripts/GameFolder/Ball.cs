@@ -89,7 +89,9 @@ public class Ball : MonoBehaviour
         displayed = false;
 
         UpdateColor();
-   
+        SpeedControl();
+
+
     }
 
     void UpdateColor()
@@ -269,5 +271,15 @@ public class Ball : MonoBehaviour
 
         Destroy(confetti.gameObject);
 
+    }
+    private void SpeedControl()
+    {
+        Vector3 flatVel = new Vector3(0f, 0f, rb.velocity.z);
+
+        if(flatVel.magnitude > speed)
+        {
+            Vector3 limitedVel = flatVel.normalized * speed;
+            rb.velocity = new Vector3(rb.velocity.x, rb.velocity.y, limitedVel.z);
+        }
     }
 }
