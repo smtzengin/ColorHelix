@@ -10185,7 +10185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   height: 0.5
-  speed: 4
+  speed: 10
   perfectStar: 0
   isFinishLevel: 0
   particleSpawn: {fileID: 626832708}
