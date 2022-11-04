@@ -16,12 +16,12 @@ android {
     defaultConfig {
         minSdkVersion 22
         targetSdkVersion 30
-        applicationId 'com.DefaultCompany.ColorHelix'
+        applicationId 'com.QuadCenGame.ColorCylinder'
         ndk {
             abiFilters 'armeabi-v7a'
         }
         versionCode 1
-        versionName '0.1'
+        versionName '1'
     }
 
     aaptOptions {

@@ -19,7 +19,7 @@ public class ParticleController : MonoBehaviour
 
     private void Update()
     {
-        particleZ = Ball.GetZ() - 2.2f;
-        transform.position = new Vector3(0, 2.2f, particleZ);
+        particleZ = Ball.GetZ() - 1f;
+        transform.position = new Vector3(0, 1f, particleZ);
     }
 }

@@ -1,9 +1,9 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.DefaultCompany.ColorHelix"
+3    package="com.QuadCenGame.ColorCylinder"
 4    android:installLocation="preferExternal"
 5    android:versionCode="1"
-6    android:versionName="0.1" >
+6    android:versionName="1" >
 7
 8    <uses-sdk
 9        android:minSdkVersion="22"
@@ -60,99 +60,398 @@
 35        android:required="false" />
 35-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:28:9-33
 36
-37    <application
-37-->C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-83
-38        android:extractNativeLibs="true"
-38-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:18-50
-39        android:icon="@mipmap/app_icon"
-39-->C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:49-80
-40        android:label="@string/app_name" >
-40-->C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:16-48
-41        <activity
-41-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:31:9-51:20
-42            android:name="com.unity3d.player.UnityPlayerActivity"
-42-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:32:13-66
-43            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
-43-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:33:13-194
-44            android:hardwareAccelerated="false"
-44-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:34:13-48
-45            android:launchMode="singleTask"
-45-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:35:13-44
-46            android:resizeableActivity="false"
-46-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:13-47
-47            android:screenOrientation="userPortrait"
-47-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:37:13-53
-48            android:theme="@style/UnityThemeSelector" >
-48-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:13-54
-49            <intent-filter>
-49-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:13-43:29
-50                <action android:name="android.intent.action.MAIN" />
-50-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:40:17-69
-50-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:40:25-66
-51
-52                <category android:name="android.intent.category.LAUNCHER" />
-52-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:42:17-77
-52-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:42:27-74
-53            </intent-filter>
-54
-55            <meta-data
-55-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:45:13-47:40
-56                android:name="unityplayer.UnityActivity"
-56-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:46:17-57
-57                android:value="true" />
-57-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:47:17-37
-58            <meta-data
-58-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:48:13-50:40
-59                android:name="android.notch_support"
-59-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:49:17-53
-60                android:value="true" />
-60-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:50:17-37
-61        </activity>
-62
-63        <meta-data
-63-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:53:9-55:33
-64            android:name="unity.splash-mode"
-64-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:54:13-45
-65            android:value="0" />
-65-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:55:13-30
-66        <meta-data
-66-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:56:9-58:36
-67            android:name="unity.splash-enable"
-67-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:57:13-47
-68            android:value="True" />
-68-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:58:13-33
-69        <meta-data
-69-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:59:9-61:36
-70            android:name="unity.launch-fullscreen"
-70-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:60:13-51
-71            android:value="True" />
-71-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:61:13-33
-72        <meta-data
-72-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:62:9-64:37
-73            android:name="unity.allow-resizable-window"
-73-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:63:13-56
-74            android:value="False" />
-74-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:64:13-34
-75        <meta-data
-75-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:65:9-67:50
-76            android:name="notch.config"
-76-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:66:13-40
-77            android:value="portrait|landscape" />
-77-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:67:13-47
+37    <uses-permission android:name="android.permission.WAKE_LOCK" />
+37-->[:com.google.android.gms.play-services-measurement-sdk-api-20.1.2:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\ccfbeb49b48775c04399190534146ee9\com.google.android.gms.play-services-measurement-sdk-api-20.1.2\AndroidManifest.xml:25:5-68
+37-->[:com.google.android.gms.play-services-measurement-sdk-api-20.1.2:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\ccfbeb49b48775c04399190534146ee9\com.google.android.gms.play-services-measurement-sdk-api-20.1.2\AndroidManifest.xml:25:22-65
+38    <uses-permission android:name="com.google.android.gms.permission.AD_ID" /> <!-- Android package visibility setting -->
+38-->[:com.google.android.gms.play-services-measurement-sdk-api-20.1.2:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\ccfbeb49b48775c04399190534146ee9\com.google.android.gms.play-services-measurement-sdk-api-20.1.2\AndroidManifest.xml:26:5-79
+38-->[:com.google.android.gms.play-services-measurement-sdk-api-20.1.2:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\ccfbeb49b48775c04399190534146ee9\com.google.android.gms.play-services-measurement-sdk-api-20.1.2\AndroidManifest.xml:26:22-76
+39    <queries>
+39-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:24:3-37:13
+40
+41        <!-- For browser content -->
+42        <intent>
+42-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:26:5-30:14
+43            <action android:name="android.intent.action.VIEW" />
+43-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:27:7-59
+43-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:27:15-56
+44
+45            <category android:name="android.intent.category.BROWSABLE" />
+45-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:28:7-68
+45-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:28:17-65
+46
+47            <data android:scheme="https" />
+47-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:29:7-38
+47-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:29:13-35
+48        </intent>
+49        <!-- End of browser content -->
+50        <!-- For CustomTabsService -->
+51        <intent>
+51-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:26:5-30:14
+52            <action android:name="android.support.customtabs.action.CustomTabsService" />
+53        </intent>
+54        <!-- End of CustomTabsService -->
+55    </queries>
+56
+57    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+57-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:21:3-79
+57-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:21:20-76
+58    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+58-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:22:3-75
+58-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:22:20-72
+59
+60    <application
+60-->C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:3-83
+61        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+61-->[:androidx.core.core-1.6.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\736821b08ce43c689e56359e237cf55e\androidx.core.core-1.6.0\AndroidManifest.xml:24:18-86
+62        android:extractNativeLibs="true"
+62-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:30:18-50
+63        android:icon="@mipmap/app_icon"
+63-->C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:49-80
+64        android:label="@string/app_name" >
+64-->C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\launcher\src\main\AndroidManifest.xml:4:16-48
+65        <activity
+65-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:31:9-51:20
+66            android:name="com.unity3d.player.UnityPlayerActivity"
+66-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:32:13-66
+67            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density"
+67-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:33:13-194
+68            android:hardwareAccelerated="false"
+68-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:34:13-48
+69            android:launchMode="singleTask"
+69-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:35:13-44
+70            android:resizeableActivity="false"
+70-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:36:13-47
+71            android:screenOrientation="userPortrait"
+71-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:37:13-53
+72            android:theme="@style/UnityThemeSelector" >
+72-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:38:13-54
+73            <intent-filter>
+73-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:39:13-43:29
+74                <action android:name="android.intent.action.MAIN" />
+74-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:40:17-69
+74-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:40:25-66
+75
+76                <category android:name="android.intent.category.LAUNCHER" />
+76-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:42:17-77
+76-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:42:27-74
+77            </intent-filter>
 78
-79        <uses-library
-79-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:12:9-14:40
-80            android:name="org.apache.http.legacy"
-80-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:13:13-50
-81            android:required="false" />
-81-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:14:13-37
-82
-83        <meta-data
-83-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:16:9-18:70
-84            android:name="com.google.android.gms.ads.APPLICATION_ID"
-84-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:17:13-69
-85            android:value="ca-app-pub-6689356860659400~2121665339" />
-85-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:18:13-67
-86    </application>
-87
-88</manifest>
+79            <meta-data
+79-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:45:13-47:40
+80                android:name="unityplayer.UnityActivity"
+80-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:46:17-57
+81                android:value="true" />
+81-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:47:17-37
+82            <meta-data
+82-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:48:13-50:40
+83                android:name="android.notch_support"
+83-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:49:17-53
+84                android:value="true" />
+84-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:50:17-37
+85        </activity>
+86
+87        <meta-data
+87-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:53:9-55:33
+88            android:name="unity.splash-mode"
+88-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:54:13-45
+89            android:value="0" />
+89-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:55:13-30
+90        <meta-data
+90-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:56:9-58:36
+91            android:name="unity.splash-enable"
+91-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:57:13-47
+92            android:value="True" />
+92-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:58:13-33
+93        <meta-data
+93-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:59:9-61:36
+94            android:name="unity.launch-fullscreen"
+94-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:60:13-51
+95            android:value="True" />
+95-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:61:13-33
+96        <meta-data
+96-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:62:9-64:37
+97            android:name="unity.allow-resizable-window"
+97-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:63:13-56
+98            android:value="False" />
+98-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:64:13-34
+99        <meta-data
+99-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:65:9-67:50
+100            android:name="notch.config"
+100-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:66:13-40
+101            android:value="portrait|landscape" />
+101-->[:unityLibrary] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\build\intermediates\library_manifest\release\AndroidManifest.xml:67:13-47
+102
+103        <activity
+103-->[:com.google.android.gms.play-services-base-18.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\cbfc7c205ff3d80fc876617f18edfe99\com.google.android.gms.play-services-base-18.0.0\AndroidManifest.xml:20:9-22:45
+104            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+104-->[:com.google.android.gms.play-services-base-18.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\cbfc7c205ff3d80fc876617f18edfe99\com.google.android.gms.play-services-base-18.0.0\AndroidManifest.xml:20:19-85
+105            android:exported="false"
+105-->[:com.google.android.gms.play-services-base-18.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\cbfc7c205ff3d80fc876617f18edfe99\com.google.android.gms.play-services-base-18.0.0\AndroidManifest.xml:22:19-43
+106            android:theme="@android:style/Theme.Translucent.NoTitleBar" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
+106-->[:com.google.android.gms.play-services-base-18.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\cbfc7c205ff3d80fc876617f18edfe99\com.google.android.gms.play-services-base-18.0.0\AndroidManifest.xml:21:19-78
+107        <activity
+107-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:40:5-254
+108            android:name="com.google.android.gms.ads.AdActivity"
+108-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:40:15-67
+109            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+109-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:40:68-177
+110            android:exported="false"
+110-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:40:178-202
+111            android:theme="@android:style/Theme.Translucent" />
+111-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:40:203-251
+112
+113        <provider
+113-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:41:5-204
+114            android:name="com.google.android.gms.ads.MobileAdsInitProvider"
+114-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:41:15-78
+115            android:authorities="com.QuadCenGame.ColorCylinder.mobileadsinitprovider"
+115-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:41:79-152
+116            android:exported="false"
+116-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:41:153-177
+117            android:initOrder="100" />
+117-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:41:178-201
+118
+119        <service
+119-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:42:5-116
+120            android:name="com.google.android.gms.ads.AdService"
+120-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:42:14-65
+121            android:enabled="true"
+121-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:42:66-88
+122            android:exported="false" />
+122-->[:com.google.android.gms.play-services-ads-lite-21.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\18b5a5cdfe830f72c0f142b1fa3d5512\com.google.android.gms.play-services-ads-lite-21.0.0\AndroidManifest.xml:42:89-113
+123
+124        <provider
+124-->[:androidx.lifecycle.lifecycle-process-2.4.1:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\4d1b1a78ace031fdb3e5a4bac60b5b96\androidx.lifecycle.lifecycle-process-2.4.1\AndroidManifest.xml:20:5-22:16
+125            android:name="androidx.startup.InitializationProvider"
+125-->[:androidx.lifecycle.lifecycle-process-2.4.1:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\4d1b1a78ace031fdb3e5a4bac60b5b96\androidx.lifecycle.lifecycle-process-2.4.1\AndroidManifest.xml:20:15-69
+126            android:authorities="com.QuadCenGame.ColorCylinder.androidx-startup"
+126-->[:androidx.lifecycle.lifecycle-process-2.4.1:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\4d1b1a78ace031fdb3e5a4bac60b5b96\androidx.lifecycle.lifecycle-process-2.4.1\AndroidManifest.xml:20:70-138
+127            android:exported="false" >
+127-->[:androidx.lifecycle.lifecycle-process-2.4.1:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\4d1b1a78ace031fdb3e5a4bac60b5b96\androidx.lifecycle.lifecycle-process-2.4.1\AndroidManifest.xml:20:139-163
+128            <meta-data
+128-->[:androidx.lifecycle.lifecycle-process-2.4.1:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\4d1b1a78ace031fdb3e5a4bac60b5b96\androidx.lifecycle.lifecycle-process-2.4.1\AndroidManifest.xml:21:7-115
+129                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+129-->[:androidx.lifecycle.lifecycle-process-2.4.1:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\4d1b1a78ace031fdb3e5a4bac60b5b96\androidx.lifecycle.lifecycle-process-2.4.1\AndroidManifest.xml:21:18-79
+130                android:value="androidx.startup" />
+130-->[:androidx.lifecycle.lifecycle-process-2.4.1:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\4d1b1a78ace031fdb3e5a4bac60b5b96\androidx.lifecycle.lifecycle-process-2.4.1\AndroidManifest.xml:21:80-112
+131            <meta-data
+131-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:25:7-105
+132                android:name="androidx.work.WorkManagerInitializer"
+132-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:25:18-69
+133                android:value="androidx.startup" />
+133-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:25:70-102
+134        </provider>
+135
+136        <service
+136-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:27:5-229
+137            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+137-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:27:14-89
+138            android:directBootAware="false"
+138-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:27:90-121
+139            android:enabled="@bool/enable_system_alarm_service_default"
+139-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:27:122-181
+140            android:exported="false" />
+140-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:27:182-206
+141        <service
+141-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:28:5-279
+142            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+142-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:28:14-85
+143            android:directBootAware="false"
+143-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:28:86-117
+144            android:enabled="@bool/enable_system_job_service_default"
+144-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:28:118-175
+145            android:exported="true"
+145-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:28:176-199
+146            android:permission="android.permission.BIND_JOB_SERVICE" />
+146-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:28:200-256
+147        <service
+147-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:29:5-227
+148            android:name="androidx.work.impl.foreground.SystemForegroundService"
+148-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:29:14-82
+149            android:directBootAware="false"
+149-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:29:83-114
+150            android:enabled="@bool/enable_system_foreground_service_default"
+150-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:29:115-179
+151            android:exported="false" />
+151-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:29:180-204
+152
+153        <receiver
+153-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:30:5-193
+154            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+154-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:30:15-90
+155            android:directBootAware="false"
+155-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:30:91-122
+156            android:enabled="true"
+156-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:30:123-145
+157            android:exported="false" />
+157-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:30:146-170
+158        <receiver
+158-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:31:5-36:16
+159            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+159-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:31:15-108
+160            android:directBootAware="false"
+160-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:31:109-140
+161            android:enabled="false"
+161-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:31:141-164
+162            android:exported="false" >
+162-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:31:165-189
+163            <intent-filter>
+163-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:32:7-35:23
+164                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+164-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:33:9-79
+164-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:33:17-76
+165                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+165-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:34:9-82
+165-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:34:17-79
+166            </intent-filter>
+167        </receiver>
+168        <receiver
+168-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:37:5-42:16
+169            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+169-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:37:15-106
+170            android:directBootAware="false"
+170-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:37:107-138
+171            android:enabled="false"
+171-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:37:139-162
+172            android:exported="false" >
+172-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:37:163-187
+173            <intent-filter>
+173-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:38:7-41:23
+174                <action android:name="android.intent.action.BATTERY_OKAY" />
+174-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:39:9-69
+174-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:39:17-66
+175                <action android:name="android.intent.action.BATTERY_LOW" />
+175-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:40:9-68
+175-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:40:17-65
+176            </intent-filter>
+177        </receiver>
+178        <receiver
+178-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:43:5-48:16
+179            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+179-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:43:15-106
+180            android:directBootAware="false"
+180-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:43:107-138
+181            android:enabled="false"
+181-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:43:139-162
+182            android:exported="false" >
+182-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:43:163-187
+183            <intent-filter>
+183-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:44:7-47:23
+184                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+184-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:45:9-75
+184-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:45:17-72
+185                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+185-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:46:9-74
+185-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:46:17-71
+186            </intent-filter>
+187        </receiver>
+188        <receiver
+188-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:49:5-53:16
+189            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+189-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:49:15-105
+190            android:directBootAware="false"
+190-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:49:106-137
+191            android:enabled="false"
+191-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:49:138-161
+192            android:exported="false" >
+192-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:49:162-186
+193            <intent-filter>
+193-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:50:7-52:23
+194                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+194-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:51:9-71
+194-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:51:17-68
+195            </intent-filter>
+196        </receiver>
+197        <receiver
+197-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:54:5-60:16
+198            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+198-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:54:15-90
+199            android:directBootAware="false"
+199-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:54:91-122
+200            android:enabled="false"
+200-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:54:123-146
+201            android:exported="false" >
+201-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:54:147-171
+202            <intent-filter>
+202-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:55:7-59:23
+203                <action android:name="android.intent.action.BOOT_COMPLETED" />
+203-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:56:9-71
+203-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:56:17-68
+204                <action android:name="android.intent.action.TIME_SET" />
+204-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:57:9-65
+204-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:57:17-62
+205                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+205-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:58:9-73
+205-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:58:17-70
+206            </intent-filter>
+207        </receiver>
+208        <receiver
+208-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:61:5-65:16
+209            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+209-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:61:15-101
+210            android:directBootAware="false"
+210-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:61:102-133
+211            android:enabled="@bool/enable_system_alarm_service_default"
+211-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:61:134-193
+212            android:exported="false" >
+212-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:61:194-218
+213            <intent-filter>
+213-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:62:7-64:23
+214                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+214-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:63:9-90
+214-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:63:17-87
+215            </intent-filter>
+216        </receiver>
+217        <receiver
+217-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:66:5-70:16
+218            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+218-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:66:15-80
+219            android:directBootAware="false"
+219-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:66:81-112
+220            android:enabled="true"
+220-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:66:113-135
+221            android:exported="true"
+221-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:66:136-159
+222            android:permission="android.permission.DUMP" >
+222-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:66:160-204
+223            <intent-filter>
+223-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:67:7-69:23
+224                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+224-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:68:9-80
+224-->[:androidx.work.work-runtime-2.7.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\f1cd9854a499b02f41daaf36ce51c7f5\androidx.work.work-runtime-2.7.0\AndroidManifest.xml:68:17-77
+225            </intent-filter>
+226        </receiver>
+227
+228        <meta-data
+228-->[:com.google.android.gms.play-services-basement-18.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\c158dbe6bad5056979dbf1ee0625408f\com.google.android.gms.play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+229            android:name="com.google.android.gms.version"
+229-->[:com.google.android.gms.play-services-basement-18.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\c158dbe6bad5056979dbf1ee0625408f\com.google.android.gms.play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+230            android:value="@integer/google_play_services_version" />
+230-->[:com.google.android.gms.play-services-basement-18.0.0:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\c158dbe6bad5056979dbf1ee0625408f\com.google.android.gms.play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+231
+232        <service
+232-->[:androidx.room.room-runtime-2.2.5:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\androidx.room.room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+233            android:name="androidx.room.MultiInstanceInvalidationService"
+233-->[:androidx.room.room-runtime-2.2.5:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\androidx.room.room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+234            android:directBootAware="true"
+234-->[:androidx.room.room-runtime-2.2.5:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\androidx.room.room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+235            android:exported="false" />
+235-->[:androidx.room.room-runtime-2.2.5:] C:\Users\smtzn\.gradle\caches\transforms-2\files-2.1\28e9fb3eede996dd8d91f8bfd7ee4a2a\androidx.room.room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+236
+237        <uses-library
+237-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:12:9-14:40
+238            android:name="org.apache.http.legacy"
+238-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:13:13-50
+239            android:required="false" />
+239-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:14:13-37
+240
+241        <meta-data
+241-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:16:9-18:70
+242            android:name="com.google.android.gms.ads.APPLICATION_ID"
+242-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:17:13-69
+243            android:value="ca-app-pub-6689356860659400~2121665339" />
+243-->[:unityLibrary:GoogleMobileAdsPlugin.androidlib] C:\Users\smtzn\Documents\GitHub\ColorHelix\ColorHelix\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\GoogleMobileAdsPlugin.androidlib\build\intermediates\library_manifest\release\AndroidManifest.xml:18:13-67
+244    </application>
+245
+246</manifest>

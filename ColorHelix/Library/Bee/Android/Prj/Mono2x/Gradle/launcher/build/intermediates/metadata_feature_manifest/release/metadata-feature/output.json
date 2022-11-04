@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "applicationId": "com.DefaultCompany.ColorHelix",
+  "applicationId": "com.QuadCenGame.ColorCylinder",
   "variantType": "BASE_APK",
   "elements": [
     {
@@ -11,7 +11,7 @@
         "type": "MAIN",
         "splits": [],
         "versionCode": 1,
-        "versionName": "0.1",
+        "versionName": "1",
         "outputFile": "launcher-release.apk",
         "fullName": "release",
         "baseName": "release",
